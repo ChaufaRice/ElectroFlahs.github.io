@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Eléctroflash-Perú E.I.R.L. | Ingeniería en la Amazonía</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=Inter:wght@400&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#69df69",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb1c5",
+                        "outline-variant": "#bdcab7",
+                        "surface-container": "#eeedf7",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#006e19",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#656464",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed": "#3f001b",
+                        "outline": "#6e7b6a",
+                        "inverse-on-surface": "#f1effa",
+                        "inverse-surface": "#2f3038",
+                        "tertiary-container": "#f25e92",
+                        "secondary-container": "#e5e2e1",
+                        "primary-container": "#2fa83a",
+                        "on-primary-fixed-variant": "#005310",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f4f2fd",
+                        "surface-dim": "#dad9e3",
+                        "on-primary-container": "#003407",
+                        "surface-bright": "#fbf8ff",
+                        "on-background": "#1a1b22",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-surface": "#1a1b22",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ffd9e1",
+                        "on-surface-variant": "#3e4a3b",
+                        "primary": "#006e19",
+                        "background": "#fbf8ff",
+                        "secondary": "#5f5e5e",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#8d0546",
+                        "primary-fixed": "#86fc82",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-variant": "#e3e1ec",
+                        "surface-container-high": "#e8e7f1",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e3e1ec",
+                        "on-primary-fixed": "#002203",
+                        "primary-fixed-dim": "#69df69",
+                        "tertiary": "#ae285e",
+                        "surface": "#fbf8ff",
+                        "on-tertiary-container": "#5c002b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "display": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Geist"],
+                        "headline-md": ["Montserrat"],
+                        "mono-data": ["Geist"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "mono-data": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopNavBar -->
+    <nav class="bg-surface dark:bg-inverse-surface fixed top-0 w-full z-50 border-b border-outline-variant dark:border-outline">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+            <a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed flex items-center gap-2 group" href="#">
+                <img src="img/logo-horizontal.png" alt="Logo Electroflash" class="h-6 w-auto">
+                Eléctroflash-Perú E.I.R.L.
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary pb-1" href="#">Inicio</a>
+                <a class="text-on-surface dark:text-on-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#servicios">Servicios</a>
+                <a class="text-on-surface dark:text-on-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#nosotros">Nosotros</a>
+                <div class="relative group">
+                    <button class="flex items-center gap-1 text-on-surface-variant font-medium hover:text-primary transition-colors">Acceso interno <span class="material-symbols-outlined text-sm">expand_more</span></button>
+                    <div class="absolute top-full right-0 mt-2 w-48 bg-surface border border-outline-variant rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                        <a class="block px-4 py-2 hover:bg-primary/10 text-sm" href="#">Sistema SIEF</a>
+                        <a class="block px-4 py-2 hover:bg-primary/10 text-sm" href="#">Correo Corporativo</a>
+                    </div>
+                </div>
+                <button onclick="document.getElementById('quote-section').scrollIntoView({behavior: 'smooth'})" class="bg-primary-container text-white px-6 py-2 rounded font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary transition-colors scale-95 active:opacity-80 transition-transform">Solicitar Cotización</button>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-on-surface">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-surface z-40 flex-col p-6 gap-6 text-center font-bold text-xl transition-all duration-300">
+            <button id="close-menu" class="absolute top-6 right-6">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <a href="#inicio" class="py-4 border-b border-outline-variant">Inicio</a>
+            <a href="#servicios" class="py-4 border-b border-outline-variant">Servicios</a>
+            <a href="#nosotros" class="py-4 border-b border-outline-variant">Nosotros</a>
+            <a href="#quote-section" class="py-4 text-primary">Solicitar Cotización</a>
+        </div>
+    </nav>
+    <!-- Hero -->
+    <header class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-inverse-surface">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent z-10"></div>
+            <div class="w-full h-full bg-cover bg-center opacity-80" style='background-image: url("img/works/WhatsApp Image 2026-09-04 at 7.24.35 PM.jpeg");'></div>
+        </div>
+        <div class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 border border-outline-variant/30 px-3 py-1 rounded bg-black/50 backdrop-blur-sm mb-6">
+                    <span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+                    <span class="font-mono-data text-mono-data text-primary-fixed">SISTEMAS OPERATIVOS</span>
+                </div>
+                <h1 class="font-display text-headline-lg-mobile md:text-display text-white mb-4">
+                    Ingeniería eléctrica, civil y metalmecánica para la Amazonía
+                </h1>
+                <p class="font-headline-md text-headline-md text-[#2FA83A] mb-8 border-l-4 border-[#2FA83A] pl-4">
+                    Pasión que garantiza resultados
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a onclick="document.getElementById('quote-section').scrollIntoView({behavior: 'smooth'})" class="bg-[#2FA83A] text-[#111111] px-8 py-4 rounded font-label-sm text-label-sm uppercase tracking-widest hover:bg-white transition-colors flex items-center justify-center gap-2 group cursor-pointer" style="text-decoration: none;">
+                        Solicitar Cotización
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-white/50">
+            <span class="font-label-sm text-label-sm uppercase tracking-widest">Explorar</span>
+            <div class="w-[1px] h-12 bg-gradient-to-b from-white/50 to-transparent scroll-indicator"></div>
+        </div>
+        <img aria-hidden="true" class="absolute right-0 bottom-0 opacity-20 w-96 max-w-[50vw] pointer-events-none mix-blend-screen" src="https://lh3.googleusercontent.com/aida/AP1WRLuO265e0Mu9OODTYEAPhhIpi3Lmo4-RVb8fa0Z-LbT_zcOloHJeT4SdiAwnzN8u2cBvefxfO9UU8cPdTmtpHcownpMjSDxLYrT2ax8kkLfthYPktA6e_y5ZBFRAgXlaqWBkn5BzswWHQLAy94RSSHBMGGkDw6_MSGYJjmed6zILqIrQF9BKZTmoDitIzKDvVOcXYN31_IwHnvBiR56OxG9Z-0bm7tM7gVOvsxg0jcVs2sjAqzgxltErfwi"/>
+    </header>
+    <!-- Trust Bar -->
+    <section class="bg-[#111111] py-12 border-b border-[#2FA83A]/20 relative">
+        <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#2FA83A]"></div>
+        <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#2FA83A]"></div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-gutter">
+                <div class="text-center">
+                    <div class="font-display text-headline-lg text-[#2FA83A] mb-2">15+</div>
+                    <div class="font-mono-data text-mono-data text-secondary-fixed-dim uppercase tracking-wider">Años de experiencia</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-display text-headline-lg text-[#2FA83A] mb-2">500+</div>
+                    <div class="font-mono-data text-mono-data text-secondary-fixed-dim uppercase tracking-wider">Servicios completados</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-display text-headline-lg text-[#2FA83A] mb-2">Loreto</div>
+                    <div class="font-mono-data text-mono-data text-secondary-fixed-dim uppercase tracking-wider">Cobertura total</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-display text-headline-lg text-[#2FA83A] mb-2">Formal</div>
+                    <div class="font-mono-data text-mono-data text-secondary-fixed-dim uppercase tracking-wider">RUC 20611485884</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Grid -->
+    <section class="py-24 bg-surface grid-bg relative" id="servicios">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="mb-12 flex items-end justify-between border-b border-outline-variant pb-4">
+                <div>
+                    <span class="font-mono-data text-mono-data text-primary mb-2 block uppercase">01 // Áreas de Especialización</span>
+                    <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Capacidad Técnica Operativa</h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-unit md:gap-gutter">
+                <div class="group relative h-96 overflow-hidden rounded bg-inverse-surface border border-outline-variant/50">
+                    <div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-40 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500" style='background-image: url("img/works/1.jpeg");'></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <div class="w-8 h-8 rounded bg-[#2FA83A]/20 flex items-center justify-center mb-4 border border-[#2FA83A]/50">
+                            <span class="material-symbols-outlined text-[#2FA83A] text-sm">bolt</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-white mb-2">Electricidad Industrial</h3>
+                        <p class="font-body-md text-body-md text-secondary-fixed-dim opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">Instalación y mantenimiento de tableros, automatización industrial, pozos a tierra y mantenimiento preventivo/correctivo.</p>
+                    </div>
+                </div>
+                <div class="group relative h-96 overflow-hidden rounded bg-inverse-surface border border-outline-variant/50">
+                    <div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-40 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500" style='background-image: url("img/works/2.jpeg");'></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <div class="w-8 h-8 rounded bg-[#2FA83A]/20 flex items-center justify-center mb-4 border border-[#2FA83A]/50">
+                            <span class="material-symbols-outlined text-[#2FA83A] text-sm">foundation</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-white mb-2">Obras Civiles</h3>
+                        <p class="font-body-md text-body-md text-secondary-fixed-dim opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">Remodelaciones, enchapados, gasfitería, carpintería en madera y melamina, e instalaciones de vidrio.</p>
+                    </div>
+                </div>
+                <div class="group relative h-96 overflow-hidden rounded bg-inverse-surface border border-outline-variant/50">
+                    <div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-40 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500" style='background-image: url("img/works/WhatsApp Image 2026-09-01 at 10.08.23 AM.jpeg");'></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <div class="w-8 h-8 rounded bg-[#2FA83A]/20 flex items-center justify-center mb-4 border border-[#2FA83A]/50">
+                            <span class="material-symbols-outlined text-[#2FA83A] text-sm">precision_manufacturing</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-white mb-2">Metalmecánica</h3>
+                        <p class="font-body-md text-body-md text-secondary-fixed-dim opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">Fabricación, montaje y reparación de estructuras metálicas con trabajos de corte y armado de precisión.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why ElectroFlash -->
+    <section class="py-24 bg-surface-container-low border-y border-outline-variant/50" id="nosotros">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative h-[500px] border border-outline-variant p-2 bg-surface">
+                    <div class="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-primary"></div>
+                    <div class="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-primary"></div>
+                    <div class="w-full h-full bg-cover bg-center mix-blend-multiply" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsGr2TyfPHC8XsPgd5pt6lBLjoaUvHM5HQES6qJAfMiKseRDx466UWEmORro4ffEO4NhOcCjS6KwMb7qU3zakzLLVpdzgWnVE_tDJa9apPu2wtSZGrA_1znrooBONCOtok3PX6luWwYOIDfFSbAR9oxWVzg6IZ5IvLHESfUx4fnp_ERrINF5x1umtOdd-kRNf6yPRNQpSmaiz-gEisvcKKFSZsuTQ-oEOHzhcQmS_lxC92T16ug4mx5w");'></div>
+                </div>
+                <div>
+                    <span class="font-mono-data text-mono-data text-primary mb-2 block uppercase">02 // Identidad Institucional</span>
+                    <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8">Formalidad y Pasión Amazónica</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 p-4 border border-outline-variant/50 bg-surface rounded hover:border-primary transition-colors">
+                            <div class="shrink-0 w-12 h-12 bg-primary/10 rounded flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary">verified</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label-sm text-label-sm uppercase font-bold text-on-surface mb-1">Compromiso de Formalidad</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant text-sm">Facturamos, cumplimos plazos y trabajamos estrictamente en regla.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 border border-outline-variant/50 bg-surface rounded hover:border-primary transition-colors">
+                            <div class="shrink-0 w-12 h-12 bg-primary/10 rounded flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary">speed</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label-sm text-label-sm uppercase font-bold text-on-surface mb-1">Disponibilidad Total</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant text-sm">Respondemos emergencias incluso fuera de horario para evitar paradas operativas.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 border border-outline-variant/50 bg-surface rounded hover:border-primary transition-colors">
+                            <div class="shrink-0 w-12 h-12 bg-primary/10 rounded flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary">engineering</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label-sm text-label-sm uppercase font-bold text-on-surface mb-1">Versatilidad Técnica</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant text-sm">Una sola empresa para soluciones eléctricas, civiles, metalmecánicas y suministro.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Transparency/Portal Section -->
+    <section class="py-24 bg-surface relative overflow-hidden">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <span class="font-mono-data text-mono-data text-primary mb-2 block uppercase">03 // Transparencia Total</span>
+                        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Sigue tu servicio en tiempo real</h2>
+                        <p class="text-on-surface-variant mb-8">Acceda a nuestra plataforma exclusiva para clientes y mantenga el control total de sus proyectos desde cualquier lugar.</p>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-on-surface">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span>Seguimiento paso a paso de cada orden de trabajo</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-on-surface">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span>Evidencia fotográfica de cada avance</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-on-surface">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span>Comprobantes y documentos siempre disponibles</span>
+                        </li>
+                    </ul>
+                    <button class="border-2 border-primary text-primary px-8 py-3 rounded font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary/10 transition-colors">
+                        Conocer el Portal de Cliente
+                    </button>
+                </div>
+                <div class="relative">
+                    <div class="bg-surface-dim rounded-xl p-4 shadow-2xl border border-outline-variant/30">
+                        <div class="bg-white rounded-lg overflow-hidden border border-outline-variant/20">
+                            <div class="bg-inverse-surface p-3 flex items-center justify-between">
+                                <div class="flex gap-1.5">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-error"></div>
+                                    <div class="w-2.5 h-2.5 rounded-full bg-primary-container"></div>
+                                    <div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+                                </div>
+                                <div class="text-[10px] text-white/50 font-mono-data">portal.electroflash.pe</div>
+                                <div class="w-6"></div>
+                            </div>
+                            <div class="p-6 space-y-6 bg-surface-container-lowest">
+                                <div class="flex justify-between items-center">
+                                    <h5 class="font-bold text-sm">Mis Servicios Activos</h5>
+                                    <span class="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full">2 en curso</span>
+                                </div>
+                                <div class="p-4 border border-outline-variant/20 rounded-lg space-y-3">
+                                    <div class="flex justify-between text-xs">
+                                        <span class="font-bold">OT-2024-089</span>
+                                        <span class="text-primary font-bold">75%</span>
+                                    </div>
+                                    <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+                                        <div class="h-full bg-primary w-3/4"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-[10px] text-on-surface-variant">
+                                        <span class="material-symbols-outlined text-xs">photo_camera</span>
+                                        <span>Última actualización: Hace 2 horas</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 border border-outline-variant/20 rounded-lg space-y-3 opacity-60">
+                                    <div class="flex justify-between text-xs">
+                                        <span class="font-bold">OT-2024-092</span>
+                                        <span class="text-on-surface-variant font-bold">15%</span>
+                                    </div>
+                                    <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+                                        <div class="h-full bg-primary w-[15%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Workflow Section -->
+    <section class="py-24 bg-inverse-surface text-white relative overflow-hidden">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+            <div class="text-center mb-16">
+                <span class="font-mono-data text-mono-data text-[#2FA83A] mb-2 block uppercase">03 // Metodología</span>
+                <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg">Proceso Operativo Estándar</h2>
+            </div>
+            <div class="relative">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-outline-variant/30 -translate-y-1/2"></div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="relative bg-inverse-surface border border-outline-variant/20 p-6 rounded text-center">
+                        <div class="w-12 h-12 mx-auto bg-[#111111] border-2 border-[#2FA83A] rounded-full flex items-center justify-center font-mono-data text-[#2FA83A] mb-4 relative z-10">01</div>
+                        <h4 class="font-label-sm text-label-sm uppercase tracking-wider mb-2">Cotización</h4>
+                        <p class="font-body-md text-sm text-secondary-fixed-dim">Evaluación técnica detallada.</p>
+                    </div>
+                    <div class="relative bg-inverse-surface border border-outline-variant/20 p-6 rounded text-center">
+                        <div class="w-12 h-12 mx-auto bg-[#111111] border-2 border-outline-variant/50 rounded-full flex items-center justify-center font-mono-data text-white mb-4 relative z-10">02</div>
+                        <h4 class="font-label-sm text-label-sm uppercase tracking-wider mb-2">Ejecución</h4>
+                        <p class="font-body-md text-sm text-secondary-fixed-dim">Desarrollo con estándares normativos.</p>
+                    </div>
+                    <div class="relative bg-inverse-surface border border-outline-variant/20 p-6 rounded text-center">
+                        <div class="w-12 h-12 mx-auto bg-[#111111] border-2 border-outline-variant/50 rounded-full flex items-center justify-center font-mono-data text-white mb-4 relative z-10">03</div>
+                        <h4 class="font-label-sm text-label-sm uppercase tracking-wider mb-2">Evidencia</h4>
+                        <p class="font-body-md text-sm text-secondary-fixed-dim">Documentación y pruebas rigurosas.</p>
+                    </div>
+                    <div class="relative bg-inverse-surface border border-outline-variant/20 p-6 rounded text-center">
+                        <div class="w-12 h-12 mx-auto bg-[#111111] border-2 border-outline-variant/50 rounded-full flex items-center justify-center font-mono-data text-white mb-4 relative z-10">04</div>
+                        <h4 class="font-label-sm text-label-sm uppercase tracking-wider mb-2">Entrega</h4>
+                        <p class="font-body-md text-sm text-secondary-fixed-dim">Comisionamiento y puesta en marcha.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section class="py-24 bg-surface grid-bg" id="proyectos">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="mb-12 flex items-end justify-between border-b border-outline-variant pb-4">
+                <div>
+                    <span class="font-mono-data text-mono-data text-primary mb-2 block uppercase">04 // Portafolio</span>
+                    <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Trabajos Realizados</h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="group relative md:col-span-2 md:row-span-2 h-[500px] overflow-hidden rounded-xl">
+                    <img alt="Mantenimiento de Subestación" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-02 at 9.54.35 AM.jpeg">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded w-fit mb-3">Eléctrico</span>
+                        <h4 class="text-white font-headline-md text-headline-md mb-1">Mantenimiento de Subestación T-11</h4>
+                        <p class="text-primary-fixed font-mono-data text-sm">Cliente: Electro Oriente</p>
+                    </div>
+                </div>
+                <div class="group relative h-60 overflow-hidden rounded-xl">
+                    <img alt="Construcción de Nave Industrial" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-01 at 4.14.35 PM.jpeg">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                        <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded w-fit mb-2">Civil</span>
+                        <h4 class="text-white font-bold text-sm mb-1">Nave Industrial Amazonas</h4>
+                        <p class="text-primary-fixed font-mono-data text-xs">Cliente: Logística Selva</p>
+                    </div>
+                </div>
+                <div class="group relative h-60 overflow-hidden rounded-xl">
+                    <img alt="Sistemas de Control" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-01 at 9.33.20 AM.jpeg">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                        <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded w-fit mb-2">Eléctrico</span>
+                        <h4 class="text-white font-bold text-sm mb-1">Tableros de Control SCADA</h4>
+                        <p class="text-primary-fixed font-mono-data text-xs">Cliente: Petroperú</p>
+                    </div>
+                </div>
+                <div class="group relative h-60 overflow-hidden rounded-xl">
+                    <img alt="Montaje Estructural" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-02 at 7.59.25 PM.jpeg">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                        <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded w-fit mb-2">Metalmecánica</span>
+                        <h4 class="text-white font-bold text-sm mb-1">Estructuras de Soporte</h4>
+                        <p class="text-primary-fixed font-mono-data text-xs">Cliente: Consorcio Vial</p>
+                    </div>
+                </div>
+                <div class="group relative h-60 overflow-hidden rounded-xl">
+                    <img alt="Ingeniería de Proyecto" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-02 at 9.54.21 AM.jpeg">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                        <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded w-fit mb-2">Ingeniería</span>
+                        <h4 class="text-white font-bold text-sm mb-1">Supervisión de Obra</h4>
+                        <p class="text-primary-fixed font-mono-data text-xs">Cliente: Municipalidad Iquitos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Clients Section -->
+    <section class="py-16 bg-[#FAFAF9] border-b border-outline-variant/30">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+            <h2 class="font-headline-md text-headline-md text-on-surface-variant mb-12 uppercase tracking-widest">Confían en nosotros</h2>
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
+                <div class="grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center p-4 border border-outline-variant/20 bg-white rounded">
+                    <span class="font-bold text-on-surface-variant opacity-50">PETROPERÚ</span>
+                </div>
+                <div class="grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center p-4 border border-outline-variant/20 bg-white rounded">
+                    <span class="font-bold text-on-surface-variant opacity-50">ELECTRO ORIENTE</span>
+                </div>
+                <div class="grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center p-4 border border-outline-variant/20 bg-white rounded">
+                    <span class="font-bold text-on-surface-variant opacity-50">MINISTERIO TRANSPORTES</span>
+                </div>
+                <div class="grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center p-4 border border-outline-variant/20 bg-white rounded">
+                    <span class="font-bold text-on-surface-variant opacity-50">MUNICIPALIDAD IQUITOS</span>
+                </div>
+                <div class="grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center p-4 border border-outline-variant/20 bg-white rounded">
+                    <span class="font-bold text-on-surface-variant opacity-50">CONSORCIO SELVA</span>
+                </div>
+                <div class="grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center p-4 border border-outline-variant/20 bg-white rounded">
+                    <span class="font-bold text-on-surface-variant opacity-50">LOGÍSTICA AMAZONAS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Quote Section (Detailed from the first example) -->
+    <section id="quote-section" class="py-24 bg-surface relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+            <div class="mb-12 border-b border-outline-variant/50 pb-8 text-center">
+                <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">Solicita tu Cotización Técnica</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Nuestro equipo técnico especializado está listo para evaluar sus requerimientos industriales y ofrecer soluciones precisas de ingeniería. Complete el formulario para iniciar la evaluación técnica.
+                </p>
+            </div>
+            <div class="bg-surface border border-outline-variant rounded-sm shadow-sm p-6 md:p-10 relative">
+                <!-- Technical Accents -->
+                <div class="absolute top-0 left-0 w-2 h-2 border-l border-t border-outline-variant -ml-[1px] -mt-[1px]"></div>
+                <div class="absolute top-0 right-0 w-2 h-2 border-r border-t border-outline-variant -mr-[1px] -mt-[1px]"></div>
+                <div class="absolute bottom-0 left-0 w-2 h-2 border-l border-b border-outline-variant -ml-[1px] -mb-[1px]"></div>
+                <div class="absolute bottom-0 right-0 w-2 h-2 border-r border-b border-outline-variant -mr-[1px] -mb-[1px]"></div>
+                <form action="#" class="space-y-8" method="POST">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-8">
+                        <div class="relative">
+                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="fullName">Nombre completo <span class="text-error">*</span></label>
+                            <input class="w-full form-input-bottom-border font-body-md text-on-surface placeholder:text-secondary-fixed-dim transition-colors" id="fullName" name="fullName" placeholder="Ej. Carlos Mendoza" required type="text"/>
+                        </div>
+                        <div class="relative">
+                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="company">Empresa (Opcional)</label>
+                            <input class="w-full form-input-bottom-border font-body-md text-on-surface placeholder:text-secondary-fixed-dim transition-colors" id="company" name="company" placeholder="Nombre de la industria o corporación" type="text"/>
+                        </div>
+                        <div class="relative group">
+                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="docType">Tipo de documento <span class="text-error">*</span></label>
+                            <div class="relative">
+                                <select class="w-full form-input-bottom-border font-body-md text-on-surface appearance-none bg-transparent pr-8 transition-colors" id="docType" name="docType" required>
+                                    <option disabled selected value="">Seleccione...</option>
+                                    <option value="ruc">RUC</option>
+                                    <option value="dni">DNI</option>
+                                    <option value="ce">CE</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center text-on-surface-variant group-hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined">arrow_drop_down</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="docNumber">Número de documento <span class="text-error">*</span></label>
+                            <input class="w-full form-input-bottom-border font-mono-data text-mono-data text-on-surface placeholder:text-secondary-fixed-dim transition-colors" id="docNumber" name="docNumber" placeholder="Ej. 20123456789" required type="text"/>
+                        </div>
+                        <div class="relative">
+                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="phone">Teléfono / Celular <span class="text-error">*</span></label>
+                            <input class="w-full form-input-bottom-border font-mono-data text-mono-data text-on-surface placeholder:text-secondary-fixed-dim transition-colors" id="phone" name="phone" placeholder="+51 987 654 321" required type="tel"/>
+                        </div>
+                        <div class="relative">
+                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="email">Correo Electrónico <span class="text-error">*</span></label>
+                            <input class="w-full form-input-bottom-border font-body-md text-on-surface placeholder:text-secondary-fixed-dim transition-colors" id="email" name="email" placeholder="contacto@empresa.com" required type="email"/>
+                        </div>
+                    </div>
+                    <hr class="border-outline-variant/30 my-8"/>
+                    <div class="relative group">
+                        <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="serviceType">Tipo de servicio requerido <span class="text-error">*</span></label>
+                        <div class="relative">
+                            <select class="w-full form-input-bottom-border font-body-md text-on-surface appearance-none bg-transparent pr-8 transition-colors" id="serviceType" name="serviceType" required>
+                                <option disabled selected value="">Seleccione el área de ingeniería...</option>
+                                <option value="electrico">Servicio Eléctrico (Instalaciones, Tableros, Mantenimiento)</option>
+                                <option value="civil">Servicio Civil (Obras menores, Estructuras base)</option>
+                                <option value="metalmecanico">Servicio Metalmecánico (Estructuras, Soldadura industrial)</option>
+                                <option value="producto">Suministro de Producto (Materiales, Equipos)</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center text-on-surface-variant group-hover:text-primary transition-colors">
+                                <span class="material-symbols-outlined">engineering</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative mt-8">
+                        <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="details">Descripción del requerimiento técnico <span class="text-error">*</span></label>
+                        <textarea class="w-full border border-outline-variant rounded-sm p-4 font-body-md text-on-surface placeholder:text-secondary-fixed-dim focus:border-primary focus:ring-0 transition-colors resize-none bg-surface-container-lowest" id="details" name="details" placeholder="Describa el alcance de su proyecto, especificaciones técnicas clave o problemas a resolver..." required rows="4"></textarea>
+                    </div>
+                    <div class="pt-6 flex justify-end">
+                        <button class="bg-[#2fa83a] hover:bg-primary text-white font-label-sm text-label-sm uppercase tracking-wider py-4 px-8 rounded-sm transition-all duration-200 flex items-center gap-2 group relative overflow-hidden" type="submit">
+                            <span class="relative z-10 font-bold">Enviar Solicitud Técnica</span>
+                            <span class="material-symbols-outlined relative z-10 group-hover:translate-x-1 transition-transform">send</span>
+                            <div class="absolute inset-0 bg-black/10 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Final CTA -->
+    <section class="py-16 bg-[#2FA83A] text-[#111111] text-center px-margin-mobile">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-8">¿Listo para potenciar su infraestructura?</h2>
+            <button onclick="document.getElementById('quote-section').scrollIntoView({behavior: 'smooth'})" class="bg-[#111111] text-white px-8 py-4 rounded font-label-sm text-label-sm uppercase tracking-widest hover:bg-white hover:text-[#111111] transition-colors border border-[#111111] inline-block cursor-pointer">Solicitar Cotización Inmediata</button>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-inverse-surface dark:bg-surface-container-lowest border-t border-outline-variant/30 text-secondary-fixed-dim">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+            <div class="col-span-1 md:col-span-2">
+                <a class="font-headline-md text-headline-md text-primary-fixed mb-4 inline-block" href="#">Eléctroflash-Perú E.I.R.L.</a>
+                <p class="font-body-md text-body-md text-sm max-w-sm mb-6">Excelencia técnica en la Amazonía. Soluciones de ingeniería robustas para desafíos complejos.</p>
+            </div>
+            <div>
+                <h4 class="font-label-sm text-label-sm uppercase tracking-wider text-white mb-4">Enlaces Rápidos</h4>
+                <ul class="space-y-2 font-body-md text-body-md text-sm">
+                    <li><a class="hover:text-primary-fixed transition-colors" href="#">Inicio</a></li>
+                    <li><a class="hover:text-primary-fixed transition-colors" href="#servicios">Servicios</a></li>
+                    <li><a class="hover:text-primary-fixed transition-colors" href="#nosotros">Nosotros</a></li>
+                    <li><a class="hover:text-primary-fixed transition-colors" href="#">Privacidad</a></li>
+                    <li><a class="hover:text-primary-fixed transition-colors" href="#">Términos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-sm text-label-sm uppercase tracking-wider text-white mb-4">Contacto</h4>
+                <ul class="space-y-2 font-body-md text-body-md text-sm mb-6">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Calle Francisco Bolognesi, Com. Santa Clara, Iquitos, Loreto</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">mail</span> electroflashperu@gmail.com</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">phone</span> +51 935 808 480</li>
+                </ul>
+                <div class="flex items-center gap-4">
+                    <a class="text-secondary-fixed-dim hover:text-[#2FA83A] transition-colors duration-300" href="#">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    </a>
+                    <a class="text-secondary-fixed-dim hover:text-[#2FA83A] transition-colors duration-300" href="#">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"></circle></svg>
+                    </a>
+                    <a class="text-secondary-fixed-dim hover:text-[#2FA83A] transition-colors duration-300" href="#">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    </a>
+                    <a class="text-secondary-fixed-dim hover:text-[#2FA83A] transition-colors duration-300" href="#">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 21l1.65-3.8a9 9 0 113.4 2.9L3 21z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-outline-variant/10 px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center text-xs font-mono-data">
+            <p>© 2024 Eléctroflash-Perú E.I.R.L. Todos los derechos reservados.</p>
+            <p>RUC: 20611485884</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

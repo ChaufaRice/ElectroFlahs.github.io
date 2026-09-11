@@ -1,0 +1,44 @@
+/* Custom Utilities for ElectroFlash Landing Page */
+.grid-bg {
+    background-image:
+        linear-gradient(to right, #E7E7E4 1px, transparent 1px),
+        linear-gradient(to bottom, #E7E7E4 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.scroll-indicator {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+.form-input-bottom-border {
+    border: none;
+    border-bottom: 1px solid #E7E7E4;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+}
+
+.form-input-bottom-border:focus {
+    border-bottom-color: #006e19;
+    box-shadow: none;
+    outline: none;
+}
+
+.tech-corner::before, .tech-corner::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border: 1px solid #E7E7E4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
