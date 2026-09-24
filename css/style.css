@@ -1,44 +1,172 @@
-/* Custom Utilities for ElectroFlash Landing Page */
-.grid-bg {
-    background-image:
-        linear-gradient(to right, #E7E7E4 1px, transparent 1px),
-        linear-gradient(to bottom, #E7E7E4 1px, transparent 1px);
-    background-size: 24px 24px;
-}
+/* ==========================================================================
+   ElectroFlash-Perú - Industrial Brutalism & Technical Telemetry Stylesheet
+   ========================================================================== */
 
-.scroll-indicator {
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
-}
-
-.form-input-bottom-border {
-    border: none;
-    border-bottom: 1px solid #E7E7E4;
-    border-radius: 0;
-    padding-left: 0;
-    padding-right: 0;
-    background-color: transparent;
-}
-
-.form-input-bottom-border:focus {
-    border-bottom-color: #006e19;
-    box-shadow: none;
-    outline: none;
-}
-
-.tech-corner::before, .tech-corner::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    border: 1px solid #E7E7E4;
+:root {
+    --primary: #006e19;
+    --primary-light: #2fa83a;
+    --primary-dim: #005310;
+    --primary-glow: rgba(47, 168, 58, 0.4);
+    --surface: #fbf8ff;
+    --surface-dark: #121316;
+    --surface-card: #1a1b20;
+    --surface-dim: #dad9e3;
+    --border-tech: rgba(189, 202, 183, 0.3);
+    --border-accent: rgba(47, 168, 58, 0.4);
+    --text-primary: #ffffff;
+    --text-muted: #c8c6c5;
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111114;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2a2d34;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2fa83a;
+}
+
+/* Fondo de Cuadrícula Técnica (Blueprint Matrix) */
+.grid-bg {
+    background-image:
+        linear-gradient(to right, rgba(200, 205, 215, 0.4) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(200, 205, 215, 0.4) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+.grid-bg-dark {
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+/* Animaciones y Estados de Scroll */
+.scroll-indicator {
+    animation: bounceIndicator 2s infinite ease-in-out;
+}
+
+@keyframes bounceIndicator {
+    0%, 100% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(8px); opacity: 1; }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delays para efecto cascada en grids */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+/* Estilos de Formulario Técnico */
+.form-input-bottom-border {
+    border: none;
+    border-bottom: 2px solid #bdcab7;
+    border-radius: 0;
+    padding: 8px 4px;
+    background-color: transparent;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.form-input-bottom-border:focus {
+    border-bottom-color: #2fa83a;
+    background-color: rgba(47, 168, 58, 0.03);
+    box-shadow: none;
+    outline: none;
+}
+
+/* Marcadores de Esquina Técnica (Crosshairs & Corners) */
+.tech-box {
+    position: relative;
+}
+
+.tech-box::before,
+.tech-box::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-color: #2fa83a;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.tech-box::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+}
+
+.tech-box::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+}
+
+/* Botones y Glow Industrial */
+.btn-glow {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 25px rgba(47, 168, 58, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-glow:active {
+    transform: translateY(0);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 49;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* Radar pulse indicator */
+@keyframes radarPulse {
+    0% { transform: scale(0.95); opacity: 0.8; box-shadow: 0 0 0 0 rgba(47, 168, 58, 0.7); }
+    70% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 10px rgba(47, 168, 58, 0); }
+    100% { transform: scale(0.95); opacity: 0.8; box-shadow: 0 0 0 0 rgba(47, 168, 58, 0); }
+}
+
+.radar-ping {
+    animation: radarPulse 2s infinite;
 }
