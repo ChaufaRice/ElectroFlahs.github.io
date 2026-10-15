@@ -482,7 +482,7 @@
                 <div class="absolute top-0 right-0 w-2 h-2 border-r border-t border-outline-variant -mr-[1px] -mt-[1px]"></div>
                 <div class="absolute bottom-0 left-0 w-2 h-2 border-l border-b border-outline-variant -ml-[1px] -mb-[1px]"></div>
                 <div class="absolute bottom-0 right-0 w-2 h-2 border-r border-b border-outline-variant -mr-[1px] -mb-[1px]"></div>
-                <form action="#" class="space-y-8" method="POST">
+                <form action="enviar.php" class="space-y-8" method="POST" enctype="multipart/form-data">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-8">
                         <div class="relative">
                             <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="fullName">Nombre completo <span class="text-error">*</span></label>
@@ -538,6 +538,25 @@
                     <div class="relative mt-8">
                         <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="details">Descripción del requerimiento técnico <span class="text-error">*</span></label>
                         <textarea class="w-full border border-outline-variant rounded-sm p-4 font-body-md text-on-surface placeholder:text-secondary-fixed-dim focus:border-primary focus:ring-0 transition-colors resize-none bg-surface-container-lowest" id="details" name="details" placeholder="Describa el alcance de su proyecto, especificaciones técnicas clave o problemas a resolver..." required rows="4"></textarea>
+                    </div>
+
+                    <div class="relative group mt-8">
+                        <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="attachments">
+                            Adjuntar Evidencias o Planos <span class="text-secondary-fixed-dim font-normal lowercase">(Opcional)</span>
+                        </label>
+                        <div class="flex items-center justify-center w-full">
+                            <label for="attachments" class="flex flex-col items-center justify-center w-full h-32 border-2 border-outline-variant border-dashed rounded-sm cursor-pointer bg-surface-container-low hover:bg-surface-container transition-colors group">
+                                <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                    <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors mb-2">upload_file</span>
+                                    <p class="text-sm text-on-surface-variant">
+                                        <span class="font-semibold">Haga clic para subir</span> o arrastre una foto
+                                    </p>
+                                    <p class="text-xs text-secondary-fixed-dim">PNG, JPG o PDF (Máx. 10MB)</p>
+                                </div>
+                                <input id="attachments" name="attachments[]" type="file" class="hidden" multiple accept="image/*,application/pdf" capture="environment" />
+                            </label>
+                        </div>
+                        <div id="file-list" class="mt-2 text-xs text-primary font-medium"></div>
                     </div>
                     <div class="pt-6 flex justify-end">
                         <button class="bg-[#2fa83a] hover:bg-primary text-white font-label-sm text-label-sm uppercase tracking-wider py-4 px-8 rounded-sm transition-all duration-200 flex items-center gap-2 group relative overflow-hidden" type="submit">

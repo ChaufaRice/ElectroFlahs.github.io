@@ -57,40 +57,26 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // Handle File Selection Display
+    const attachmentsInput = document.getElementById('attachments');
+    if (attachmentsInput) {
+        attachmentsInput.addEventListener('change', function(e) {
+            const fileList = document.getElementById('file-list');
+            const files = e.target.files;
+            if (files && files.length > 0) {
+                const names = Array.from(files).map(f => f.name).join(', ');
+                if (fileList) fileList.innerHTML = `Archivos seleccionados: ${names}`;
+            } else if (fileList) {
+                fileList.innerHTML = '';
+            }
+        });
+    }
+
     // Contact Form Handling
     const contactForm = document.querySelector('form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            // Get form values
-            const fullName = document.getElementById('fullName').value;
-            const company = document.getElementById('company').value || 'No especificada';
-            const docType = document.getElementById('docType').value;
-            const docNumber = document.getElementById('docNumber').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
-            const serviceType = document.getElementById('serviceType').value;
-            const details = document.getElementById('details').value;
-
-            // Construct WhatsApp message
-            const message = `*Nueva Solicitud de Cotización Técnica* ⚡%0A%0A` +
-                            `*Cliente:* ${encodeURIComponent(fullName)}%0A` +
-                            `*Empresa:* ${encodeURIComponent(company)}%0A` +
-                            `*Documento:* ${encodeURIComponent(docType)} ${encodeURIComponent(docNumber)}%0A` +
-                            `*Teléfono:* ${encodeURIComponent(phone)}%0A` +
-                            `*Correo:* ${encodeURIComponent(email)}%0A` +
-                            `*Servicio:* ${encodeURIComponent(serviceType)}%0A%0A` +
-                            `*Detalles del requerimiento:*%0A${encodeURIComponent(details)}`;
-
-            // WhatsApp API link (Number: 51935808480)
-            const whatsappUrl = `https://wa.me/51935808480?text=${message}`;
-
-            // Open WhatsApp in a new tab
-            window.open(whatsappUrl, '_blank');
-
-            // Optional: Reset form
-            contactForm.reset();
+            // Se elimina e.preventDefault() para permitir el envío al archivo enviar.php
         });
     }
 });
