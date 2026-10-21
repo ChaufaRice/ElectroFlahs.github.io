@@ -1,6 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Hero Background Slider
+    const heroBg = document.getElementById('hero-bg');
+    const heroImages = [
+        'img/works/WhatsApp Image 2026-09-04 at 7.24.35 PM.jpeg',
+        'img/works/WhatsApp Image 2026-09-04 at 7.24.34 PM.jpeg',
+        'img/works/WhatsApp Image 2026-09-04 at 5.38.54 PM.jpeg',
+        'img/works/WhatsApp Image 2026-09-03 at 3.16.38 PM.jpeg',
+        'img/works/WhatsApp Image 2026-09-02 at 9.54.35 AM.jpeg',
+        'img/works/WhatsApp Image 2026-09-02 at 7.59.25 PM.jpeg',
+        'img/works/WhatsApp Image 2026-09-01 at 10.08.23 AM.jpeg',
+        'img/works/2.jpeg',
+        'img/works/1.jpeg'
+    ];
+    let currentImageIndex = 0;
+
+    const changeHeroImage = () => {
+        currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+        // Efecto de transición simple: desvanecer y cambiar
+        heroBg.style.opacity = '0.4';
+        setTimeout(() => {
+            heroBg.style.backgroundImage = `url("${heroImages[currentImageIndex]}")`;
+            heroBg.style.opacity = '0.8';
+        }, 500);
+    };
+
+    if (heroBg) {
+        setInterval(changeHeroImage, 5000); // Cambia cada 5 segundos
+    }
+
     // Mobile Menu Toggle
     const menuBtn = document.querySelector('#mobile-menu-btn');
+
     const closeMenu = document.querySelector('#close-menu');
     const mobileMenu = document.querySelector('#mobile-menu');
 

@@ -141,16 +141,16 @@
     <header class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-inverse-surface">
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent z-10"></div>
-            <div class="w-full h-full bg-cover bg-center opacity-80" style='background-image: url("img/works/WhatsApp Image 2026-09-04 at 7.24.35 PM.jpeg");'></div>
+            <div id="hero-bg" class="w-full h-full bg-cover bg-center opacity-80 transition-all duration-1000" style='background-image: url("img/works/WhatsApp Image 2026-09-04 at 7.24.35 PM.jpeg");'></div>
         </div>
         <div class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
             <div class="max-w-3xl">
                 <div class="max-w-3xl">
                 <h1 class="font-display text-headline-lg-mobile md:text-display text-white mb-4">
-                    Ingeniería eléctrica, civil y metalmecánica para la Amazonía
+                    Tu Proyecto en la Amazonía, Ejecutado Sin Riesgos y Diseñado para Durar
                 </h1>
                 <p class="font-headline-md text-headline-md text-[#2FA83A] mb-8 border-l-4 border-[#2FA83A] pl-4">
-                    Pasión que garantiza resultados
+                    Ingeniería eléctrica, civil y metalmecánica con garantía total de cumplimiento.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a onclick="document.getElementById('quote-section').scrollIntoView({behavior: 'smooth'})" class="bg-[#2FA83A] text-[#111111] px-8 py-4 rounded font-label-sm text-label-sm uppercase tracking-widest hover:bg-white transition-colors flex items-center justify-center gap-2 group cursor-pointer" style="text-decoration: none;">
@@ -173,7 +173,7 @@
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-gutter">
                 <div class="text-center">
-                    <div class="font-display text-headline-lg text-[#2FA83A] mb-2">15+</div>
+                    <div class="font-display text-headline-lg text-[#2FA83A] mb-2">3</div>
                     <div class="font-mono-data text-mono-data text-secondary-fixed-dim uppercase tracking-wider">Años de experiencia</div>
                 </div>
                 <div class="text-center">
@@ -181,7 +181,7 @@
                     <div class="font-mono-data text-mono-data text-secondary-fixed-dim uppercase tracking-wider">Servicios completados</div>
                 </div>
                 <div class="text-center">
-                    <div class="font-display text-headline-lg text-[#2FA83A] mb-2">Loreto</div>
+                    <div class="font-display text-headline-lg text-[#2FA83A] mb-2">Nacional</div>
                     <div class="font-mono-data text-mono-data text-secondary-fixed-dim uppercase tracking-wider">Cobertura total</div>
                 </div>
                 <div class="text-center">
@@ -445,24 +445,30 @@
     <section class="py-16 bg-[#FAFAF9] border-b border-outline-variant/30">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
             <h2 class="font-headline-md text-headline-md text-on-surface-variant mb-12 uppercase tracking-widest">Confían en nosotros</h2>
-            <div class="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
-                <div class="grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center p-4 border border-outline-variant/20 bg-white rounded">
-                    <span class="font-bold text-on-surface-variant opacity-50">PETROPERÚ</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 items-center justify-center">
+                <div class="flex flex-col items-center gap-4 group">
+                    <div class="w-full max-w-[240px] h-40 p-6 border border-outline-variant/20 bg-white rounded flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 shadow-sm">
+                        <img src="Logos/ADPIquitos.jpg" alt="ADP Iquitos" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <span class="font-bold text-on-surface-variant opacity-70 text-sm uppercase tracking-wider">ADP Iquitos</span>
                 </div>
-                <div class="grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center p-4 border border-outline-variant/20 bg-white rounded">
-                    <span class="font-bold text-on-surface-variant opacity-50">ELECTRO ORIENTE</span>
+                <div class="flex flex-col items-center gap-4 group">
+                    <div class="w-full max-w-[240px] h-40 p-6 border border-outline-variant/20 bg-white rounded flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 shadow-sm">
+                        <img src="Logos/DON POLLO.png" alt="Don Pollo Tropical SAC" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <span class="font-bold text-on-surface-variant opacity-70 text-sm uppercase tracking-wider">DON POLLO TROPICAL SAC</span>
                 </div>
-                <div class="grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center p-4 border border-outline-variant/20 bg-white rounded">
-                    <span class="font-bold text-on-surface-variant opacity-50">MINISTERIO TRANSPORTES</span>
+                <div class="flex flex-col items-center gap-4 group">
+                    <div class="w-full max-w-[240px] h-40 p-6 border border-outline-variant/20 bg-white rounded flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 shadow-sm">
+                        <img src="Logos/SANJUAN.jpg" alt="Municipalidad Distrital de San Juan Bautista" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <span class="font-bold text-on-surface-variant opacity-70 text-sm uppercase tracking-wider">MUNICIPALIDAD DISTRITAL DE SAN JUAN BAUTISTA</span>
                 </div>
-                <div class="grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center p-4 border border-outline-variant/20 bg-white rounded">
-                    <span class="font-bold text-on-surface-variant opacity-50">MUNICIPALIDAD IQUITOS</span>
-                </div>
-                <div class="grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center p-4 border border-outline-variant/20 bg-white rounded">
-                    <span class="font-bold text-on-surface-variant opacity-50">CONSORCIO SELVA</span>
-                </div>
-                <div class="grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center p-4 border border-outline-variant/20 bg-white rounded">
-                    <span class="font-bold text-on-surface-variant opacity-50">LOGÍSTICA AMAZONAS</span>
+                <div class="flex flex-col items-center gap-4 group">
+                    <div class="w-full max-w-[240px] h-40 p-6 border border-outline-variant/20 bg-white rounded flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 shadow-sm">
+                        <img src="Logos/SODIMAC.jpeg" alt="Sodimac" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <span class="font-bold text-on-surface-variant opacity-70 text-sm uppercase tracking-wider">Sodimac</span>
                 </div>
             </div>
         </div>
