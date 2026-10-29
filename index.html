@@ -4,629 +4,1128 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Eléctroflash-Perú E.I.R.L. | Ingeniería en la Amazonía</title>
+    
+    <!-- Tailwind CSS with Forms and Container Queries -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=Inter:wght@400&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Google Fonts & Material Symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&family=Geist:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Custom Apple / iOS Design System Styles -->
     <link rel="stylesheet" href="css/style.css">
+    
     <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
-                    "colors": {
-                        "inverse-primary": "#69df69",
-                        "on-secondary": "#ffffff",
-                        "tertiary-fixed-dim": "#ffb1c5",
-                        "outline-variant": "#bdcab7",
-                        "surface-container": "#eeedf7",
-                        "on-error": "#ffffff",
-                        "surface-tint": "#006e19",
-                        "on-primary": "#ffffff",
-                        "on-secondary-container": "#656464",
-                        "secondary-fixed": "#e5e2e1",
-                        "on-tertiary-fixed": "#3f001b",
-                        "outline": "#6e7b6a",
-                        "inverse-on-surface": "#f1effa",
-                        "inverse-surface": "#2f3038",
-                        "tertiary-container": "#f25e92",
-                        "secondary-container": "#e5e2e1",
+                    colors: {
+                        "primary": "#006e19",
                         "primary-container": "#2fa83a",
+                        "primary-fixed": "#86fc82",
+                        "primary-fixed-dim": "#69df69",
+                        "inverse-primary": "#69df69",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#003407",
+                        "on-primary-fixed": "#002203",
                         "on-primary-fixed-variant": "#005310",
+                        "secondary": "#5f5e5e",
+                        "secondary-container": "#e5e2e1",
+                        "secondary-fixed": "#e5e2e1",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#656464",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#474646",
+                        "surface": "#fbf8ff",
+                        "surface-dim": "#dad9e3",
+                        "surface-bright": "#fbf8ff",
+                        "surface-variant": "#e3e1ec",
                         "surface-container-lowest": "#ffffff",
                         "surface-container-low": "#f4f2fd",
-                        "surface-dim": "#dad9e3",
-                        "on-primary-container": "#003407",
-                        "surface-bright": "#fbf8ff",
-                        "on-background": "#1a1b22",
-                        "secondary-fixed-dim": "#c8c6c5",
-                        "on-surface": "#1a1b22",
-                        "on-secondary-fixed-variant": "#474646",
-                        "on-error-container": "#93000a",
-                        "tertiary-fixed": "#ffd9e1",
-                        "on-surface-variant": "#3e4a3b",
-                        "primary": "#006e19",
-                        "background": "#fbf8ff",
-                        "secondary": "#5f5e5e",
-                        "error-container": "#ffdad6",
-                        "on-tertiary-fixed-variant": "#8d0546",
-                        "primary-fixed": "#86fc82",
-                        "error": "#ba1a1a",
-                        "on-secondary-fixed": "#1c1b1b",
-                        "surface-variant": "#e3e1ec",
+                        "surface-container": "#eeedf7",
                         "surface-container-high": "#e8e7f1",
-                        "on-tertiary": "#ffffff",
                         "surface-container-highest": "#e3e1ec",
-                        "on-primary-fixed": "#002203",
-                        "primary-fixed-dim": "#69df69",
-                        "tertiary": "#ae285e",
-                        "surface": "#fbf8ff",
-                        "on-tertiary-container": "#5c002b"
+                        "on-surface": "#1a1b22",
+                        "on-surface-variant": "#3e4a3b",
+                        "inverse-surface": "#2f3038",
+                        "inverse-on-surface": "#f1effa",
+                        "outline": "#6e7b6a",
+                        "outline-variant": "#bdcab7",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "background": "#fbf8ff",
+                        "on-background": "#1a1b22"
                     },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Inter', 'sans-serif'],
+                        display: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', 'Montserrat', 'sans-serif'],
+                        mono: ['Geist', 'SF Mono', 'Menlo', 'monospace']
                     },
-                    "spacing": {
-                        "container-max": "1280px",
-                        "margin-desktop": "64px",
-                        "gutter": "24px",
-                        "unit": "4px",
-                        "margin-mobile": "16px"
-                    },
-                    "fontFamily": {
-                        "headline-lg-mobile": ["Montserrat"],
-                        "display": ["Montserrat"],
-                        "body-md": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "label-sm": ["Geist"],
-                        "headline-md": ["Montserrat"],
-                        "mono-data": ["Geist"],
-                        "headline-lg": ["Montserrat"]
-                    },
-                    "fontSize": {
-                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "700" }],
-                        "display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
-                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "mono-data": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
-                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    maxWidth: {
+                        'container-max': '1240px'
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
-    <!-- TopNavBar -->
-    <nav class="bg-surface dark:bg-inverse-surface fixed top-0 w-full z-50 border-b border-outline-variant dark:border-outline">
-        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-            <a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed flex items-center justify-start group" href="#">
-                <img src="img/logo-horizontal.png" alt="Logo Electroflash" class="h-16 w-auto">
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-white apple-mesh-bg min-h-screen relative">
+
+    <!-- ==========================================================================
+         Apple Floating Island Navigation Bar
+         ========================================================================== -->
+    <header class="fixed top-4 md:top-6 inset-x-0 z-50 px-4 pointer-events-none">
+        <nav class="max-w-5xl mx-auto apple-glass-nav rounded-full px-4 md:px-6 py-2.5 md:py-3 flex items-center justify-between pointer-events-auto transition-all duration-300">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group transition-transform duration-200 active:scale-95" id="nav-brand-logo">
+                <img src="img/logo-horizontal.png" alt="Logo Electroflash" class="h-9 md:h-11 w-auto object-contain">
             </a>
-            <div class="hidden md:flex items-center gap-8">
-                <a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary pb-1" href="#">Inicio</a>
-                <a class="text-on-surface dark:text-on-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#servicios">Servicios</a>
-                <a class="text-on-surface dark:text-on-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#nosotros">Nosotros</a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center gap-1 lg:gap-2">
+                <a href="#" class="px-4 py-1.5 rounded-full text-sm font-semibold text-primary bg-primary/10 transition-colors">Inicio</a>
+                <a href="#servicios" class="px-4 py-1.5 rounded-full text-sm font-medium text-on-surface/80 hover:text-primary hover:bg-black/5 transition-all">Servicios</a>
+                <a href="#nosotros" class="px-4 py-1.5 rounded-full text-sm font-medium text-on-surface/80 hover:text-primary hover:bg-black/5 transition-all">Nosotros</a>
+                <a href="#proyectos" class="px-4 py-1.5 rounded-full text-sm font-medium text-on-surface/80 hover:text-primary hover:bg-black/5 transition-all">Proyectos</a>
+                
+                <!-- Internal Access Popover -->
                 <div class="relative group">
-                    <button class="flex items-center gap-1 text-on-surface-variant font-medium hover:text-primary transition-colors">Acceso interno <span class="material-symbols-outlined text-sm">expand_more</span></button>
-                    <div class="absolute top-full right-0 mt-2 w-48 bg-surface border border-outline-variant rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-                        <a class="block px-4 py-2 hover:bg-primary/10 text-sm" href="#">Portal del Cliente</a>
-                        <a class="block px-4 py-2 hover:bg-primary/10 text-sm" href="#">Correo Corporativo</a>
+                    <button class="flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-medium text-on-surface/80 hover:text-primary hover:bg-black/5 transition-all" id="btn-acceso-interno">
+                        <span>Acceso</span>
+                        <span class="material-symbols-outlined text-base">expand_more</span>
+                    </button>
+                    <div class="absolute top-full right-0 mt-3 w-56 apple-glass-card rounded-2xl p-2 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <a href="#portal" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-primary/10 text-sm font-medium text-on-surface transition-colors">
+                            <span class="material-symbols-outlined text-primary text-lg">dashboard</span>
+                            <span>Portal del Cliente</span>
+                        </a>
+                        <a href="https://mail.google.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-primary/10 text-sm font-medium text-on-surface transition-colors">
+                            <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                            <span>Correo Corporativo</span>
+                        </a>
                     </div>
                 </div>
-                <button onclick="document.getElementById('quote-section').scrollIntoView({behavior: 'smooth'})" class="bg-primary-container text-white px-6 py-2 rounded font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary transition-colors scale-95 active:opacity-80 transition-transform">Solicitar Cotización</button>
             </div>
-            <button id="mobile-menu-btn" class="md:hidden text-on-surface">
-                <span class="material-symbols-outlined">menu</span>
+
+            <!-- Desktop Primary CTA Button -->
+            <div class="hidden md:block">
+                <button onclick="document.getElementById('quote-section').scrollIntoView({behavior: 'smooth'})" class="apple-btn-primary rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wider shadow-sm flex items-center gap-1.5" id="btn-nav-cotizar">
+                    <span>Cotizar Proyecto</span>
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <div class="flex items-center gap-2 md:hidden">
+                <button onclick="document.getElementById('quote-section').scrollIntoView({behavior: 'smooth'})" class="apple-btn-primary rounded-full px-3.5 py-1.5 text-xs font-bold">
+                    Cotizar
+                </button>
+                <button id="mobile-menu-btn" class="w-9 h-9 rounded-full bg-black/5 flex items-center justify-center text-on-surface hover:bg-black/10 transition-colors">
+                    <span class="material-symbols-outlined text-xl">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay (Apple iOS Sheet style) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-xl flex flex-col justify-end p-4 transition-all duration-300">
+        <div class="apple-glass-card rounded-squircle-xl p-6 w-full max-w-sm mx-auto flex flex-col gap-3 shadow-2xl relative">
+            <div class="flex items-center justify-between pb-3 border-b border-black/5">
+                <img src="img/logo-horizontal.png" alt="Logo Electroflash" class="h-8 w-auto">
+                <button id="close-menu" class="w-8 h-8 rounded-full bg-black/5 flex items-center justify-center text-on-surface">
+                    <span class="material-symbols-outlined text-lg">close</span>
+                </button>
+            </div>
+            <div class="flex flex-col gap-1 py-2">
+                <a href="#" class="px-4 py-3 rounded-xl font-semibold text-primary bg-primary/10">Inicio</a>
+                <a href="#servicios" class="px-4 py-3 rounded-xl font-medium text-on-surface hover:bg-black/5">Servicios</a>
+                <a href="#nosotros" class="px-4 py-3 rounded-xl font-medium text-on-surface hover:bg-black/5">Nosotros</a>
+                <a href="#proyectos" class="px-4 py-3 rounded-xl font-medium text-on-surface hover:bg-black/5">Proyectos</a>
+                <a href="#portal" class="px-4 py-3 rounded-xl font-medium text-on-surface hover:bg-black/5">Portal de Clientes</a>
+            </div>
+            <button onclick="document.getElementById('quote-section').scrollIntoView({behavior: 'smooth'}); document.getElementById('close-menu').click();" class="apple-btn-primary rounded-full py-3.5 font-bold text-center text-sm">
+                Solicitar Cotización Técnica
             </button>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden fixed inset-0 bg-surface z-40 flex-col p-6 gap-6 text-center font-bold text-xl transition-all duration-300">
-            <button id="close-menu" class="absolute top-6 right-6">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-            <a href="#inicio" class="py-4 border-b border-outline-variant">Inicio</a>
-            <a href="#servicios" class="py-4 border-b border-outline-variant">Servicios</a>
-            <a href="#nosotros" class="py-4 border-b border-outline-variant">Nosotros</a>
-            <a href="#quote-section" class="py-4 text-primary">Solicitar Cotización</a>
-        </div>
-    </nav>
-    <!-- Hero -->
-    <header class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-inverse-surface">
+    </div>
+
+    <!-- ==========================================================================
+         Hero Section (Apple Product Reveal / Keynote Style)
+         ========================================================================== -->
+    <section class="relative min-h-[92vh] flex items-center pt-28 pb-20 overflow-hidden bg-[#111111]" id="hero-section">
+        <!-- Background Slider with Smooth Fade -->
         <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent z-10"></div>
-            <div id="hero-bg" class="w-full h-full bg-cover bg-center opacity-80 transition-all duration-1000" style='background-image: url("img/works/WhatsApp Image 2026-09-04 at 7.24.35 PM.jpeg");'></div>
+            <div id="hero-bg" class="w-full h-full bg-cover bg-center transition-all duration-1000 transform scale-105" style='background-image: url("img/works/WhatsApp Image 2026-09-04 at 7.24.35 PM.jpeg");'></div>
+            <!-- Apple Subtle Ambient Radial Glow -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/80 to-[#111111]/60"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(47,168,58,0.25)_0%,transparent_70%)] pointer-events-none"></div>
         </div>
-        <div class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+
+        <!-- Hero Content Container -->
+        <div class="relative z-20 max-w-container-max mx-auto px-4 sm:px-6 lg:px-8 w-full text-center sm:text-left">
             <div class="max-w-3xl">
-                <div class="max-w-3xl">
-                <h1 class="font-display text-headline-lg-mobile md:text-display text-white mb-4">
-                    Tu Proyecto en la Amazonía, Ejecutado Sin Riesgos y Diseñado para Durar
+                <!-- Live Operational Status Pill Badge -->
+                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full apple-glass-pill text-xs font-semibold text-white/90 mb-6 border border-white/20 shadow-lg">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#2fa83a] apple-pulse-dot"></span>
+                    <span>Sede Iquitos &amp; Cobertura en toda la Amazonía Peruana</span>
+                </div>
+
+                <!-- Main Apple Keynote Headline -->
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] mb-6">
+                    Tu Proyecto en la Amazonía,<br class="hidden sm:inline" />
+                    <span class="bg-gradient-to-r from-white via-white to-[#86fc82] bg-clip-text text-transparent">Ejecutado Sin Riesgos</span> y Diseñado para Durar.
                 </h1>
-                <p class="font-headline-md text-headline-md text-[#2FA83A] mb-8 border-l-4 border-[#2FA83A] pl-4">
-                    Ingeniería eléctrica, civil y metalmecánica con garantía total de cumplimiento.
+
+                <!-- Subheadline -->
+                <p class="text-base sm:text-lg lg:text-xl text-white/80 max-w-2xl font-normal leading-relaxed mb-8">
+                    Ingeniería eléctrica, civil y metalmecánica con garantía total de cumplimiento normativo, estándares de seguridad y trazabilidad en tiempo real.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a onclick="document.getElementById('quote-section').scrollIntoView({behavior: 'smooth'})" class="bg-[#2FA83A] text-[#111111] px-8 py-4 rounded font-label-sm text-label-sm uppercase tracking-widest hover:bg-white transition-colors flex items-center justify-center gap-2 group cursor-pointer" style="text-decoration: none;">
-                        Solicitar Cotización
-                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+
+                <!-- Dual Apple Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-center gap-4">
+                    <a href="#quote-section" class="apple-btn-primary rounded-full px-8 py-4 text-sm sm:text-base font-semibold flex items-center justify-center gap-2.5 w-full sm:w-auto shadow-xl group cursor-pointer" id="hero-btn-cotizar">
+                        <span>Solicitar Cotización Técnica</span>
+                        <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                    <a href="#servicios" class="apple-btn-secondary rounded-full px-7 py-4 text-sm sm:text-base font-semibold flex items-center justify-center gap-2 w-full sm:w-auto group cursor-pointer" id="hero-btn-servicios">
+                        <span class="material-symbols-outlined text-primary text-xl">build_circle</span>
+                        <span>Ver Capacidades</span>
                     </a>
                 </div>
+
+                <!-- Technical Trust Indicator Badges -->
+                <div class="mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center gap-6 text-white/70 text-xs sm:text-sm font-medium">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[#2fa83a] text-lg">verified</span>
+                        <span>RUC 20611485884</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[#2fa83a] text-lg">shield</span>
+                        <span>Garantía de Obra y Facturación</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[#2fa83a] text-lg">timer</span>
+                        <span>Respuesta 24/7 a Emergencias</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-white/50">
-            <span class="font-label-sm text-label-sm uppercase tracking-widest">Explorar</span>
-            <div class="w-[1px] h-12 bg-gradient-to-b from-white/50 to-transparent scroll-indicator"></div>
+
+        <!-- Scroll Indicator Pill -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-2 text-white/40">
+            <span class="text-[11px] font-semibold tracking-widest uppercase">Explorar</span>
+            <div class="w-5 h-9 rounded-full border-2 border-white/30 flex items-start justify-center p-1">
+                <div class="w-1.5 h-2 rounded-full bg-white/70 animate-bounce"></div>
+            </div>
         </div>
-        <img aria-hidden="true" class="absolute right-0 bottom-0 opacity-20 w-96 max-w-[50vw] pointer-events-none mix-blend-screen" src="https://lh3.googleusercontent.com/aida/AP1WRLuO265e0Mu9OODTYEAPhhIpi3Lmo4-RVb8fa0Z-LbT_zcOloHJeT4SdiAwnzN8u2cBvefxfO9UU8cPdTmtpHcownpMjSDxLYrT2ax8kkLfthYPktA6e_y5ZBFRAgXlaqWBkn5BzswWHQLAy94RSSHBMGGkDw6_MSGYJjmed6zILqIrQF9BKZTmoDitIzKDvVOcXYN31_IwHnvBiR56OxG9Z-0bm7tM7gVOvsxg0jcVs2sjAqzgxltErfwi"/>
-    </header>
-    <!-- Trust Bar -->
-    <section class="bg-[#111111] py-12 border-b border-[#2FA83A]/20 relative">
-        <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#2FA83A]"></div>
-        <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#2FA83A]"></div>
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-gutter">
-                <div class="text-center">
-                    <div class="font-display text-headline-lg text-[#2FA83A] mb-2">3</div>
-                    <div class="font-mono-data text-mono-data text-secondary-fixed-dim uppercase tracking-wider">Años de experiencia</div>
+    </section>
+
+    <!-- ==========================================================================
+         Trust & Metric Cards (Apple Health / Fitness Widget Style)
+         ========================================================================== -->
+    <section class="relative z-30 -mt-10 px-4 sm:px-6 lg:px-8 max-w-container-max mx-auto" id="metricas">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <!-- Metric Card 1 -->
+            <div class="apple-glass-card rounded-squircle-md p-5 sm:p-6 text-center flex flex-col items-center justify-center">
+                <div class="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-3">
+                    <span class="material-symbols-outlined text-2xl">history_edu</span>
                 </div>
-                <div class="text-center">
-                    <div class="font-display text-headline-lg text-[#2FA83A] mb-2">500+</div>
-                    <div class="font-mono-data text-mono-data text-secondary-fixed-dim uppercase tracking-wider">Servicios completados</div>
+                <div class="text-3xl sm:text-4xl font-extrabold text-[#006e19] tracking-tight mb-1">3+</div>
+                <div class="text-xs sm:text-sm font-bold text-on-surface">Años de Trayectoria</div>
+                <div class="text-[11px] text-secondary mt-0.5">Experiencia comprobada</div>
+            </div>
+
+            <!-- Metric Card 2 -->
+            <div class="apple-glass-card rounded-squircle-md p-5 sm:p-6 text-center flex flex-col items-center justify-center">
+                <div class="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-3">
+                    <span class="material-symbols-outlined text-2xl">task_alt</span>
                 </div>
-                <div class="text-center">
-                    <div class="font-display text-headline-lg text-[#2FA83A] mb-2">Nacional</div>
-                    <div class="font-mono-data text-mono-data text-secondary-fixed-dim uppercase tracking-wider">Cobertura total</div>
+                <div class="text-3xl sm:text-4xl font-extrabold text-[#006e19] tracking-tight mb-1">500+</div>
+                <div class="text-xs sm:text-sm font-bold text-on-surface">Servicios Realizados</div>
+                <div class="text-[11px] text-secondary mt-0.5">Satisfacción total garantizada</div>
+            </div>
+
+            <!-- Metric Card 3 -->
+            <div class="apple-glass-card rounded-squircle-md p-5 sm:p-6 text-center flex flex-col items-center justify-center">
+                <div class="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-3">
+                    <span class="material-symbols-outlined text-2xl">public</span>
                 </div>
-                <div class="text-center">
-                    <div class="font-display text-headline-lg text-[#2FA83A] mb-2">Formal</div>
-                    <div class="font-mono-data text-mono-data text-secondary-fixed-dim uppercase tracking-wider">RUC 20611485884</div>
+                <div class="text-3xl sm:text-4xl font-extrabold text-[#006e19] tracking-tight mb-1">Nacional</div>
+                <div class="text-xs sm:text-sm font-bold text-on-surface">Cobertura Estratégica</div>
+                <div class="text-[11px] text-secondary mt-0.5">Iquitos, Selva y todo el Perú</div>
+            </div>
+
+            <!-- Metric Card 4 -->
+            <div class="apple-glass-card rounded-squircle-md p-5 sm:p-6 text-center flex flex-col items-center justify-center">
+                <div class="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-3">
+                    <span class="material-symbols-outlined text-2xl">verified_user</span>
+                </div>
+                <div class="text-3xl sm:text-4xl font-extrabold text-[#006e19] tracking-tight mb-1">Formal</div>
+                <div class="text-xs sm:text-sm font-bold text-on-surface">RUC 20611485884</div>
+                <div class="text-[11px] text-secondary mt-0.5">Empresa 100% constituida</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         Services Section (Apple App Store Bento & Segmented Control)
+         ========================================================================== -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-container-max mx-auto relative" id="servicios">
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-wider mb-3">
+                <span class="material-symbols-outlined text-sm">settings_suggest</span>
+                Capacidad Técnica Operativa
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-on-surface mb-4">
+                Ingeniería Multidisciplinaria sin Fisuras
+            </h2>
+            <p class="text-base text-secondary">
+                Ejecutamos cada servicio bajo los más rigurosos estándares técnicos, brindando soluciones integrales para los desafíos de la Amazonía.
+            </p>
+
+            <!-- Apple Segmented Control for Service Filtering -->
+            <div class="mt-8 flex justify-center">
+                <div class="segmented-control" id="service-segmented-control">
+                    <button class="segmented-control-item active" data-filter="all">Todos</button>
+                    <button class="segmented-control-item" data-filter="electrico">Electricidad</button>
+                    <button class="segmented-control-item" data-filter="civil">Obras Civiles</button>
+                    <button class="segmented-control-item" data-filter="metalmecanica">Metalmecánica</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bento Grid of Services -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8" id="services-grid">
+            <!-- Service 1: Electricidad Industrial -->
+            <div class="service-card group relative h-[440px] rounded-squircle-lg overflow-hidden apple-glass-card p-0 shadow-lg" data-category="electrico">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style='background-image: url("img/works/WhatsApp Image 2026-09-01 at 10.08.23 AM.jpeg");'></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                
+                <!-- Card Badge -->
+                <div class="absolute top-5 left-5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full apple-glass-pill text-xs font-bold text-white shadow-sm">
+                        <span class="material-symbols-outlined text-sm text-[#86fc82]">bolt</span>
+                        Eléctrico
+                    </span>
+                </div>
+
+                <!-- Card Content -->
+                <div class="absolute bottom-0 inset-x-0 p-6 flex flex-col justify-end text-white">
+                    <div class="w-10 h-10 rounded-2xl bg-[#2fa83a]/20 border border-[#2fa83a]/40 flex items-center justify-center mb-3">
+                        <span class="material-symbols-outlined text-[#86fc82] text-xl">bolt</span>
+                    </div>
+                    <h3 class="text-2xl font-bold tracking-tight mb-2">Electricidad Industrial</h3>
+                    <p class="text-sm text-white/80 leading-relaxed mb-4">
+                        Instalación y mantenimiento de tableros de potencia, automatización SCADA, sistemas de puesta a tierra y mantenimiento predictivo/correctivo.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-white/10 text-white/90">Tableros</span>
+                        <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-white/10 text-white/90">Pozos a Tierra</span>
+                        <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-white/10 text-white/90">Automatización</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Obras Civiles -->
+            <div class="service-card group relative h-[440px] rounded-squircle-lg overflow-hidden apple-glass-card p-0 shadow-lg" data-category="civil">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style='background-image: url("img/works/2.jpeg");'></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                
+                <!-- Card Badge -->
+                <div class="absolute top-5 left-5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full apple-glass-pill text-xs font-bold text-white shadow-sm">
+                        <span class="material-symbols-outlined text-sm text-[#86fc82]">foundation</span>
+                        Civil
+                    </span>
+                </div>
+
+                <!-- Card Content -->
+                <div class="absolute bottom-0 inset-x-0 p-6 flex flex-col justify-end text-white">
+                    <div class="w-10 h-10 rounded-2xl bg-[#2fa83a]/20 border border-[#2fa83a]/40 flex items-center justify-center mb-3">
+                        <span class="material-symbols-outlined text-[#86fc82] text-xl">foundation</span>
+                    </div>
+                    <h3 class="text-2xl font-bold tracking-tight mb-2">Obras Civiles</h3>
+                    <p class="text-sm text-white/80 leading-relaxed mb-4">
+                        Remodelaciones integrales, enchapados, gasfitería especializada, carpintería en madera y melamina, divisiones e instalaciones de vidrio templado.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-white/10 text-white/90">Remodelaciones</span>
+                        <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-white/10 text-white/90">Acabados</span>
+                        <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-white/10 text-white/90">Infraestructura</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Metalmecánica -->
+            <div class="service-card group relative h-[440px] rounded-squircle-lg overflow-hidden apple-glass-card p-0 shadow-lg" data-category="metalmecanica">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style='background-image: url("img/works/1.jpeg");'></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                
+                <!-- Card Badge -->
+                <div class="absolute top-5 left-5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full apple-glass-pill text-xs font-bold text-white shadow-sm">
+                        <span class="material-symbols-outlined text-sm text-[#86fc82]">precision_manufacturing</span>
+                        Metalmecánica
+                    </span>
+                </div>
+
+                <!-- Card Content -->
+                <div class="absolute bottom-0 inset-x-0 p-6 flex flex-col justify-end text-white">
+                    <div class="w-10 h-10 rounded-2xl bg-[#2fa83a]/20 border border-[#2fa83a]/40 flex items-center justify-center mb-3">
+                        <span class="material-symbols-outlined text-[#86fc82] text-xl">precision_manufacturing</span>
+                    </div>
+                    <h3 class="text-2xl font-bold tracking-tight mb-2">Metalmecánica</h3>
+                    <p class="text-sm text-white/80 leading-relaxed mb-4">
+                        Fabricación, montaje y reparación de estructuras metálicas, naves industriales, soldadura calificada y trabajos de corte y armado de precisión.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-white/10 text-white/90">Estructuras</span>
+                        <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-white/10 text-white/90">Montaje</span>
+                        <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-white/10 text-white/90">Soldadura</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Services Grid -->
-    <section class="py-24 bg-surface grid-bg relative" id="servicios">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <div class="mb-12 flex items-end justify-between border-b border-outline-variant pb-4">
-                <div>
-                    <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Capacidad Técnica Operativa</h2>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-unit md:gap-gutter">
-                <div class="group relative h-96 overflow-hidden rounded bg-inverse-surface border border-outline-variant/50">
-                    <div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-40 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500" style='background-image: url("img/works/WhatsApp Image 2026-09-01 at 10.08.23 AM.jpeg");'></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6 w-full">
-                        <div class="w-8 h-8 rounded bg-[#2FA83A]/20 flex items-center justify-center mb-4 border border-[#2FA83A]/50">
-                            <span class="material-symbols-outlined text-[#2FA83A] text-sm">bolt</span>
-                        </div>
-                        <h3 class="font-headline-md text-headline-md text-white mb-2">Electricidad Industrial</h3>
-                        <p class="font-body-md text-body-md text-secondary-fixed-dim opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">Instalación y mantenimiento de tableros, automatización industrial, pozos a tierra y mantenimiento preventivo/correctivo.</p>
-                    </div>
-                </div>
-                <div class="group relative h-96 overflow-hidden rounded bg-inverse-surface border border-outline-variant/50">
-                    <div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-40 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500" style='background-image: url("img/works/2.jpeg");'></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6 w-full">
-                        <div class="w-8 h-8 rounded bg-[#2FA83A]/20 flex items-center justify-center mb-4 border border-[#2FA83A]/50">
-                            <span class="material-symbols-outlined text-[#2FA83A] text-sm">foundation</span>
-                        </div>
-                        <h3 class="font-headline-md text-headline-md text-white mb-2">Obras Civiles</h3>
-                        <p class="font-body-md text-body-md text-secondary-fixed-dim opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">Remodelaciones, enchapados, gasfitería, carpintería en madera y melamina, e instalaciones de vidrio.</p>
-                    </div>
-                </div>
-                <div class="group relative h-96 overflow-hidden rounded bg-inverse-surface border border-outline-variant/50">
-                    <div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-40 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500" style='background-image: url("img/works/1.jpeg");'></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6 w-full">
-                        <div class="w-8 h-8 rounded bg-[#2FA83A]/20 flex items-center justify-center mb-4 border border-[#2FA83A]/50">
-                            <span class="material-symbols-outlined text-[#2FA83A] text-sm">precision_manufacturing</span>
-                        </div>
-                        <h3 class="font-headline-md text-headline-md text-white mb-2">Metalmecánica</h3>
-                        <p class="font-body-md text-body-md text-secondary-fixed-dim opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">Fabricación, montaje y reparación de estructuras metálicas con trabajos de corte y armado de precisión.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Why ElectroFlash -->
-    <section class="py-24 bg-surface-container-low border-y border-outline-variant/50" id="nosotros">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="relative h-[500px] border border-outline-variant p-2 bg-surface">
-                    <div class="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-primary"></div>
-                    <div class="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-primary"></div>
-                    <div class="w-full h-full bg-cover bg-center mix-blend-multiply" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsGr2TyfPHC8XsPgd5pt6lBLjoaUvHM5HQES6qJAfMiKseRDx466UWEmORro4ffEO4NhOcCjS6KwMb7qU3zakzLLVpdzgWnVE_tDJa9apPu2wtSZGrA_1znrooBONCOtok3PX6luWwYOIDfFSbAR9oxWVzg6IZ5IvLHESfUx4fnp_ERrINF5x1umtOdd-kRNf6yPRNQpSmaiz-gEisvcKKFSZsuTQ-oEOHzhcQmS_lxC92T16ug4mx5w");'></div>
-                </div>
-                <div>
-                    <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8">Formalidad y Pasión Amazónica</h2>
-                    <div class="space-y-6">
-                        <div class="flex gap-4 p-4 border border-outline-variant/50 bg-surface rounded hover:border-primary transition-colors">
-                            <div class="shrink-0 w-12 h-12 bg-primary/10 rounded flex items-center justify-center">
-                                <span class="material-symbols-outlined text-primary">verified</span>
-                            </div>
-                            <div>
-                                <h4 class="font-label-sm text-label-sm uppercase font-bold text-on-surface mb-1">Compromiso de Formalidad</h4>
-                                <p class="font-body-md text-body-md text-on-surface-variant text-sm">Facturamos, cumplimos plazos y trabajamos estrictamente en regla.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4 p-4 border border-outline-variant/50 bg-surface rounded hover:border-primary transition-colors">
-                            <div class="shrink-0 w-12 h-12 bg-primary/10 rounded flex items-center justify-center">
-                                <span class="material-symbols-outlined text-primary">speed</span>
-                            </div>
-                            <div>
-                                <h4 class="font-label-sm text-label-sm uppercase font-bold text-on-surface mb-1">Disponibilidad Total</h4>
-                                <p class="font-body-md text-body-md text-on-surface-variant text-sm">Respondemos emergencias incluso fuera de horario para evitar paradas operativas.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4 p-4 border border-outline-variant/50 bg-surface rounded hover:border-primary transition-colors">
-                            <div class="shrink-0 w-12 h-12 bg-primary/10 rounded flex items-center justify-center">
-                                <span class="material-symbols-outlined text-primary">engineering</span>
-                            </div>
-                            <div>
-                                <h4 class="font-label-sm text-label-sm uppercase font-bold text-on-surface mb-1">Versatilidad Técnica</h4>
-                                <p class="font-body-md text-body-md text-on-surface-variant text-sm">Una sola empresa para soluciones eléctricas, civiles, metalmecánicas y suministro.</p>
+
+    <!-- ==========================================================================
+         Why ElectroFlash (Apple iOS Widget Board Style)
+         ========================================================================== -->
+    <section class="py-24 bg-surface-container-low/50 relative border-y border-black/5" id="nosotros">
+        <div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Column: Visual Showcase Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative h-[480px] rounded-squircle-xl overflow-hidden shadow-2xl border border-white/60">
+                        <div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsGr2TyfPHC8XsPgd5pt6lBLjoaUvHM5HQES6qJAfMiKseRDx466UWEmORro4ffEO4NhOcCjS6KwMb7qU3zakzLLVpdzgWnVE_tDJa9apPu2wtSZGrA_1znrooBONCOtok3PX6luWwYOIDfFSbAR9oxWVzg6IZ5IvLHESfUx4fnp_ERrINF5x1umtOdd-kRNf6yPRNQpSmaiz-gEisvcKKFSZsuTQ-oEOHzhcQmS_lxC92T16ug4mx5w");'></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        
+                        <!-- Floating Glass Pill on Image -->
+                        <div class="absolute bottom-6 inset-x-6 apple-glass-card rounded-squircle-md p-4 text-white border border-white/30">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-[#2fa83a] flex items-center justify-center text-white shrink-0">
+                                    <span class="material-symbols-outlined text-lg">verified</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Pasión que garantiza resultados</h4>
+                                    <p class="text-xs text-white/80">Sede central en Iquitos con alcance nacional</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- Transparency/Portal Section -->
-    <section class="py-24 bg-surface relative overflow-hidden">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
+
+                <!-- Right Column: iOS Inset Grouped Cards -->
+                <div class="lg:col-span-7 space-y-6">
                     <div>
-                        <span class="font-mono-data text-mono-data text-primary mb-2 block uppercase">Transparencia Total</span>
-                        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Sigue tu servicio en tiempo real</h2>
-                        <p class="text-on-surface-variant mb-8">Acceda a nuestra plataforma exclusiva para clientes y mantenga el control total de sus proyectos desde cualquier lugar.</p>
-                    </div>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-on-surface">
-                            <span class="material-symbols-outlined text-primary">check_circle</span>
-                            <span>Seguimiento paso a paso de cada orden de trabajo</span>
-                        </li>
-                        <li class="flex items-center gap-3 text-on-surface">
-                            <span class="material-symbols-outlined text-primary">check_circle</span>
-                            <span>Evidencia fotográfica de cada avance</span>
-                        </li>
-                        <li class="flex items-center gap-3 text-on-surface">
-                            <span class="material-symbols-outlined text-primary">check_circle</span>
-                            <span>Comprobantes y documentos siempre disponibles</span>
-                        </li>
-                    </ul>
-                    <button class="border-2 border-primary text-primary px-8 py-3 rounded font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary/10 transition-colors">
-                        Conocer el Portal de Cliente
-                    </button>
-                </div>
-                <div class="relative">
-                    <div class="bg-surface-dim rounded-xl p-4 shadow-2xl border border-outline-variant/30">
-                        <div class="bg-white rounded-lg overflow-hidden border border-outline-variant/20">
-                            <div class="bg-inverse-surface p-3 flex items-center justify-between">
-                                <div class="flex gap-1.5">
-                                    <div class="w-2.5 h-2.5 rounded-full bg-error"></div>
-                                    <div class="w-2.5 h-2.5 rounded-full bg-primary-container"></div>
-                                    <div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
-                                </div>
-                                <div class="text-[10px] text-white/50 font-mono-data">portal.electroflash.pe</div>
-                                <div class="w-6"></div>
-                            </div>
-                            <div class="p-6 space-y-6 bg-surface-container-lowest">
-                                <div class="flex justify-between items-center">
-                                    <h5 class="font-bold text-sm">Mis Servicios Activos</h5>
-                                    <span class="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full">2 en curso</span>
-                                </div>
-                                <div class="p-4 border border-outline-variant/20 rounded-lg space-y-3">
-                                    <div class="flex justify-between text-xs">
-                                        <span class="font-bold">OT-2024-089</span>
-                                        <span class="text-primary font-bold">75%</span>
-                                    </div>
-                                    <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
-                                        <div class="h-full bg-primary w-3/4"></div>
-                                    </div>
-                                    <div class="flex items-center gap-2 text-[10px] text-on-surface-variant">
-                                        <span class="material-symbols-outlined text-xs">photo_camera</span>
-                                        <span>Última actualización: Hace 2 horas</span>
-                                    </div>
-                                </div>
-                                <div class="p-4 border border-outline-variant/20 rounded-lg space-y-3 opacity-60">
-                                    <div class="flex justify-between text-xs">
-                                        <span class="font-bold">OT-2024-092</span>
-                                        <span class="text-on-surface-variant font-bold">15%</span>
-                                    </div>
-                                    <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
-                                        <div class="h-full bg-primary w-[15%]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full -z-10"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Workflow Section -->
-    <section class="py-24 bg-inverse-surface text-white relative overflow-hidden">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-            <div class="text-center mb-16">
-                <span class="font-mono-data text-mono-data text-[#2FA83A] mb-2 block uppercase">Metodología</span>
-                <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg">Proceso Operativo Estándar</h2>
-            </div>
-            <div class="relative">
-                <div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-outline-variant/30 -translate-y-1/2"></div>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div class="relative bg-inverse-surface border border-outline-variant/20 p-6 rounded text-center">
-                        <div class="w-12 h-12 mx-auto bg-[#111111] border-2 border-[#2FA83A] rounded-full flex items-center justify-center font-mono-data text-[#2FA83A] mb-4 relative z-10">01</div>
-                        <h4 class="font-label-sm text-label-sm uppercase tracking-wider mb-2">Cotización</h4>
-                        <p class="font-body-md text-sm text-secondary-fixed-dim">Evaluación técnica detallada.</p>
-                    </div>
-                    <div class="relative bg-inverse-surface border border-outline-variant/20 p-6 rounded text-center">
-                        <div class="w-12 h-12 mx-auto bg-[#111111] border-2 border-outline-variant/50 rounded-full flex items-center justify-center font-mono-data text-white mb-4 relative z-10">02</div>
-                        <h4 class="font-label-sm text-label-sm uppercase tracking-wider mb-2">Ejecución</h4>
-                        <p class="font-body-md text-sm text-secondary-fixed-dim">Desarrollo con estándares normativos.</p>
-                    </div>
-                    <div class="relative bg-inverse-surface border border-outline-variant/20 p-6 rounded text-center">
-                        <div class="w-12 h-12 mx-auto bg-[#111111] border-2 border-outline-variant/50 rounded-full flex items-center justify-center font-mono-data text-white mb-4 relative z-10">03</div>
-                        <h4 class="font-label-sm text-label-sm uppercase tracking-wider mb-2">Evidencia</h4>
-                        <p class="font-body-md text-sm text-secondary-fixed-dim">Documentación y pruebas rigurosas.</p>
-                    </div>
-                    <div class="relative bg-inverse-surface border border-outline-variant/20 p-6 rounded text-center">
-                        <div class="w-12 h-12 mx-auto bg-[#111111] border-2 border-outline-variant/50 rounded-full flex items-center justify-center font-mono-data text-white mb-4 relative z-10">04</div>
-                        <h4 class="font-label-sm text-label-sm uppercase tracking-wider mb-2">Entrega</h4>
-                        <p class="font-body-md text-sm text-secondary-fixed-dim">Comisionamiento y puesta en marcha.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Portfolio Section -->
-    <section class="py-24 bg-surface grid-bg" id="proyectos">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <div class="mb-12 flex items-end justify-between border-b border-outline-variant pb-4">
-                <div>
-                    <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Trabajos Realizados</h2>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="group relative md:col-span-2 md:row-span-2 h-[500px] overflow-hidden rounded-xl">
-                    <img alt="Mantenimiento de Subestación" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-02 at 9.54.35 AM.jpeg">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded w-fit mb-3">Eléctrico</span>
-                        <h4 class="text-white font-headline-md text-headline-md mb-1">Mantenimiento de Subestación T-11</h4>
-                        <p class="text-primary-fixed font-mono-data text-sm">Cliente: Electro Oriente</p>
-                    </div>
-                </div>
-                <div class="group relative h-60 overflow-hidden rounded-xl">
-                    <img alt="Construcción de Nave Industrial" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-01 at 4.14.35 PM.jpeg">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                        <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded w-fit mb-2">Civil</span>
-                        <h4 class="text-white font-bold text-sm mb-1">Nave Industrial Amazonas</h4>
-                        <p class="text-primary-fixed font-mono-data text-xs">Cliente: Logística Selva</p>
-                    </div>
-                </div>
-                <div class="group relative h-60 overflow-hidden rounded-xl">
-                    <img alt="Sistemas de Control" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-01 at 9.33.20 AM.jpeg">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                        <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded w-fit mb-2">Eléctrico</span>
-                        <h4 class="text-white font-bold text-sm mb-1">Tableros de Control SCADA</h4>
-                        <p class="text-primary-fixed font-mono-data text-xs">Cliente: Petroperú</p>
-                    </div>
-                </div>
-                <div class="group relative h-60 overflow-hidden rounded-xl">
-                    <img alt="Montaje Estructural" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-02 at 7.59.25 PM.jpeg">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                        <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded w-fit mb-2">Metalmecánica</span>
-                        <h4 class="text-white font-bold text-sm mb-1">Estructuras de Soporte</h4>
-                        <p class="text-primary-fixed font-mono-data text-xs">Cliente: Consorcio Vial</p>
-                    </div>
-                </div>
-                <div class="group relative h-60 overflow-hidden rounded-xl">
-                    <img alt="Ingeniería de Proyecto" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-02 at 9.54.21 AM.jpeg">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                        <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded w-fit mb-2">Ingeniería</span>
-                        <h4 class="text-white font-bold text-sm mb-1">Supervisión de Obra</h4>
-                        <p class="text-primary-fixed font-mono-data text-xs">Cliente: Municipalidad Iquitos</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Clients Section -->
-    <section class="py-16 bg-[#FAFAF9] border-b border-outline-variant/30">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
-            <h2 class="font-headline-md text-headline-md text-on-surface-variant mb-12 uppercase tracking-widest">Confían en nosotros</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 items-center justify-center">
-                <div class="flex flex-col items-center gap-4 group">
-                    <div class="w-full max-w-[240px] h-40 p-6 border border-outline-variant/20 bg-white rounded flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 shadow-sm">
-                        <img src="Logos/ADPIquitos.jpg" alt="ADP Iquitos" class="max-h-full max-w-full object-contain">
-                    </div>
-                    <span class="font-bold text-on-surface-variant opacity-70 text-sm uppercase tracking-wider">ADP Iquitos</span>
-                </div>
-                <div class="flex flex-col items-center gap-4 group">
-                    <div class="w-full max-w-[240px] h-40 p-6 border border-outline-variant/20 bg-white rounded flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 shadow-sm">
-                        <img src="Logos/DON POLLO.png" alt="Don Pollo Tropical SAC" class="max-h-full max-w-full object-contain">
-                    </div>
-                    <span class="font-bold text-on-surface-variant opacity-70 text-sm uppercase tracking-wider">DON POLLO TROPICAL SAC</span>
-                </div>
-                <div class="flex flex-col items-center gap-4 group">
-                    <div class="w-full max-w-[240px] h-40 p-6 border border-outline-variant/20 bg-white rounded flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 shadow-sm">
-                        <img src="Logos/SANJUAN.jpg" alt="Municipalidad Distrital de San Juan Bautista" class="max-h-full max-w-full object-contain">
-                    </div>
-                    <span class="font-bold text-on-surface-variant opacity-70 text-sm uppercase tracking-wider">MUNICIPALIDAD DISTRITAL DE SAN JUAN BAUTISTA</span>
-                </div>
-                <div class="flex flex-col items-center gap-4 group">
-                    <div class="w-full max-w-[240px] h-40 p-6 border border-outline-variant/20 bg-white rounded flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 shadow-sm">
-                        <img src="Logos/SODIMAC.jpeg" alt="Sodimac" class="max-h-full max-w-full object-contain">
-                    </div>
-                    <span class="font-bold text-on-surface-variant opacity-70 text-sm uppercase tracking-wider">Sodimac</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Quote Section (Detailed from the first example) -->
-    <section id="quote-section" class="py-24 bg-surface relative overflow-hidden">
-        <div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-            <div class="mb-12 border-b border-outline-variant/50 pb-8 text-center">
-                <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">Solicita tu Cotización Técnica</h2>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                    Nuestro equipo técnico especializado está listo para evaluar sus requerimientos industriales y ofrecer soluciones precisas de ingeniería. Complete el formulario para iniciar la evaluación técnica.
-                </p>
-            </div>
-            <div class="bg-surface border border-outline-variant rounded-sm shadow-sm p-6 md:p-10 relative">
-                <!-- Technical Accents -->
-                <div class="absolute top-0 left-0 w-2 h-2 border-l border-t border-outline-variant -ml-[1px] -mt-[1px]"></div>
-                <div class="absolute top-0 right-0 w-2 h-2 border-r border-t border-outline-variant -mr-[1px] -mt-[1px]"></div>
-                <div class="absolute bottom-0 left-0 w-2 h-2 border-l border-b border-outline-variant -ml-[1px] -mb-[1px]"></div>
-                <div class="absolute bottom-0 right-0 w-2 h-2 border-r border-b border-outline-variant -mr-[1px] -mb-[1px]"></div>
-                <form action="enviar.php" class="space-y-8" method="POST" enctype="multipart/form-data">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-8">
-                        <div class="relative">
-                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="fullName">Nombre completo <span class="text-error">*</span></label>
-                            <input class="w-full form-input-bottom-border font-body-md text-on-surface placeholder:text-secondary-fixed-dim transition-colors" id="fullName" name="fullName" placeholder="Ej. Carlos Mendoza" required type="text"/>
-                        </div>
-                        <div class="relative">
-                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="company">Empresa (Opcional)</label>
-                            <input class="w-full form-input-bottom-border font-body-md text-on-surface placeholder:text-secondary-fixed-dim transition-colors" id="company" name="company" placeholder="Nombre de la industria o corporación" type="text"/>
-                        </div>
-                        <div class="relative group">
-                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="docType">Tipo de documento <span class="text-error">*</span></label>
-                            <div class="relative">
-                                <select class="w-full form-input-bottom-border font-body-md text-on-surface appearance-none bg-transparent pr-8 transition-colors" id="docType" name="docType" required>
-                                    <option disabled selected value="">Seleccione...</option>
-                                    <option value="ruc">RUC</option>
-                                    <option value="dni">DNI</option>
-                                    <option value="ce">CE</option>
-                                </select>
-                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center text-on-surface-variant group-hover:text-primary transition-colors">
-                                    <span class="material-symbols-outlined">arrow_drop_down</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="relative">
-                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="docNumber">Número de documento <span class="text-error">*</span></label>
-                            <input class="w-full form-input-bottom-border font-mono-data text-mono-data text-on-surface placeholder:text-secondary-fixed-dim transition-colors" id="docNumber" name="docNumber" placeholder="Ej. 20123456789" required type="text"/>
-                        </div>
-                        <div class="relative">
-                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="phone">Teléfono / Celular <span class="text-error">*</span></label>
-                            <input class="w-full form-input-bottom-border font-mono-data text-mono-data text-on-surface placeholder:text-secondary-fixed-dim transition-colors" id="phone" name="phone" placeholder="+51 987 654 321" required type="tel"/>
-                        </div>
-                        <div class="relative">
-                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="email">Correo Electrónico <span class="text-error">*</span></label>
-                            <input class="w-full form-input-bottom-border font-body-md text-on-surface placeholder:text-secondary-fixed-dim transition-colors" id="email" name="email" placeholder="contacto@empresa.com" required type="email"/>
-                        </div>
-                    </div>
-                    <hr class="border-outline-variant/30 my-8"/>
-                    <div class="relative group">
-                        <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="serviceType">Tipo de servicio requerido <span class="text-error">*</span></label>
-                        <div class="relative">
-                            <select class="w-full form-input-bottom-border font-body-md text-on-surface appearance-none bg-transparent pr-8 transition-colors" id="serviceType" name="serviceType" required>
-                                <option disabled selected value="">Seleccione el área de ingeniería...</option>
-                                <option value="electrico">Servicio Eléctrico (Instalaciones, Tableros, Mantenimiento)</option>
-                                <option value="civil">Servicio Civil (Obras menores, Estructuras base)</option>
-                                <option value="metalmecanico">Servicio Metalmecánico (Estructuras, Soldadura industrial)</option>
-                                <option value="producto">Suministro de Producto (Materiales, Equipos)</option>
-                            </select>
-                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center text-on-surface-variant group-hover:text-primary transition-colors">
-                                <span class="material-symbols-outlined">engineering</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative mt-8">
-                        <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="details">Descripción del requerimiento técnico <span class="text-error">*</span></label>
-                        <textarea class="w-full border border-outline-variant rounded-sm p-4 font-body-md text-on-surface placeholder:text-secondary-fixed-dim focus:border-primary focus:ring-0 transition-colors resize-none bg-surface-container-lowest" id="details" name="details" placeholder="Describa el alcance de su proyecto, especificaciones técnicas clave o problemas a resolver..." required rows="4"></textarea>
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-wider mb-3">
+                            <span class="material-symbols-outlined text-sm">military_tech</span>
+                            Nuestros Pilares
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-on-surface mb-4">
+                            Formalidad y Excelencia Amazónica
+                        </h2>
+                        <p class="text-base text-secondary leading-relaxed">
+                            Frente a la informalidad del sector, Electroflash responde con rigor legal, supervisión técnica colegiada y compromiso de entrega en plazo.
+                        </p>
                     </div>
 
-                    <div class="relative group mt-8">
-                        <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2" for="attachments">
-                            Adjuntar Evidencias o Planos <span class="text-secondary-fixed-dim font-normal lowercase">(Opcional)</span>
-                        </label>
-                        <div class="flex items-center justify-center w-full">
-                            <label for="attachments" class="flex flex-col items-center justify-center w-full h-32 border-2 border-outline-variant border-dashed rounded-sm cursor-pointer bg-surface-container-low hover:bg-surface-container transition-colors group">
-                                <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                                    <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors mb-2">upload_file</span>
-                                    <p class="text-sm text-on-surface-variant">
-                                        <span class="font-semibold">Haga clic para subir</span> o arrastre una foto
-                                    </p>
-                                    <p class="text-xs text-secondary-fixed-dim">PNG, JPG o PDF (Máx. 10MB)</p>
+                    <div class="space-y-4 pt-2">
+                        <!-- Value Card 1 -->
+                        <div class="apple-glass-card rounded-squircle-md p-5 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center text-primary shrink-0 border border-primary/20">
+                                <span class="material-symbols-outlined text-2xl">verified</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="font-bold text-base text-on-surface">Compromiso de Formalidad Total</h4>
+                                    <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-primary/10 text-primary">En regla</span>
                                 </div>
-                                <input id="attachments" name="attachments[]" type="file" class="hidden" multiple accept="image/*,application/pdf" capture="environment" />
-                            </label>
+                                <p class="text-sm text-secondary mt-1">Facturamos legalmente, cumplimos plazos y operamos estrictamente bajo normas técnicas y de seguridad en obra.</p>
+                            </div>
                         </div>
-                        <div id="file-list" class="mt-2 text-xs text-primary font-medium"></div>
+
+                        <!-- Value Card 2 -->
+                        <div class="apple-glass-card rounded-squircle-md p-5 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center text-primary shrink-0 border border-primary/20">
+                                <span class="material-symbols-outlined text-2xl">speed</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="font-bold text-base text-on-surface">Disponibilidad Operativa Total</h4>
+                                    <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-primary/10 text-primary">24/7</span>
+                                </div>
+                                <p class="text-sm text-secondary mt-1">Respondemos emergencias industriales incluso fuera de horario regular para evitar costosas paradas operativas.</p>
+                            </div>
+                        </div>
+
+                        <!-- Value Card 3 -->
+                        <div class="apple-glass-card rounded-squircle-md p-5 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center text-primary shrink-0 border border-primary/20">
+                                <span class="material-symbols-outlined text-2xl">architecture</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="font-bold text-base text-on-surface">Versatilidad Técnica Multidisciplinaria</h4>
+                                    <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-primary/10 text-primary">Integral</span>
+                                </div>
+                                <p class="text-sm text-secondary mt-1">Un solo contratista para soluciones eléctricas, civiles, metalmecánicas y suministro de materiales certificados.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pt-6 flex justify-end">
-                        <button class="bg-[#2fa83a] hover:bg-primary text-white font-label-sm text-label-sm uppercase tracking-wider py-4 px-8 rounded-sm transition-all duration-200 flex items-center gap-2 group relative overflow-hidden" type="submit">
-                            <span class="relative z-10 font-bold">Enviar Solicitud Técnica</span>
-                            <span class="material-symbols-outlined relative z-10 group-hover:translate-x-1 transition-transform">send</span>
-                            <div class="absolute inset-0 bg-black/10 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         Client Portal / Transparency Showcase (macOS / iPadOS Glass Window)
+         ========================================================================== -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-container-max mx-auto relative overflow-hidden" id="portal">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <!-- Left Info Column -->
+            <div class="lg:col-span-5 space-y-6">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-wider">
+                    <span class="material-symbols-outlined text-sm">visibility</span>
+                    Trazabilidad Digital
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-on-surface">
+                    Sigue tu proyecto en tiempo real
+                </h2>
+                <p class="text-base text-secondary leading-relaxed">
+                    Nuestra plataforma exclusiva para clientes le permite mantener el control total de sus obras desde cualquier lugar, con total transparencia y respaldo documental.
+                </p>
+
+                <div class="space-y-4 pt-2">
+                    <div class="flex items-center gap-3 text-sm font-semibold text-on-surface">
+                        <div class="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                            <span class="material-symbols-outlined text-base">check</span>
+                        </div>
+                        <span>Seguimiento paso a paso de cada orden de trabajo</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-sm font-semibold text-on-surface">
+                        <div class="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                            <span class="material-symbols-outlined text-base">check</span>
+                        </div>
+                        <span>Evidencia fotográfica fehaciente de cada avance</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-sm font-semibold text-on-surface">
+                        <div class="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                            <span class="material-symbols-outlined text-base">check</span>
+                        </div>
+                        <span>Comprobantes, actas y certificados siempre descargables</span>
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <button class="apple-btn-secondary rounded-full px-7 py-3.5 text-sm font-bold flex items-center gap-2 group">
+                        <span>Conocer el Portal de Cliente</span>
+                        <span class="material-symbols-outlined text-primary text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Column: macOS / iPadOS Live Window Mockup -->
+            <div class="lg:col-span-7">
+                <div class="apple-glass-card rounded-squircle-lg overflow-hidden shadow-2xl border border-black/10">
+                    <!-- macOS Window Title Bar -->
+                    <div class="bg-[#1f2029] px-4 py-3 flex items-center justify-between border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-[#ff5f57] border border-[#e0443e]"></div>
+                            <div class="w-3 h-3 rounded-full bg-[#febc2e] border border-[#d89e24]"></div>
+                            <div class="w-3 h-3 rounded-full bg-[#28c840] border border-[#1aab29]"></div>
+                        </div>
+                        <div class="apple-glass-pill px-4 py-0.5 rounded-full text-[11px] font-mono text-white/70 flex items-center gap-1.5 border border-white/10">
+                            <span class="material-symbols-outlined text-xs text-[#2fa83a]">lock</span>
+                            <span>portal.electroflash.pe</span>
+                        </div>
+                        <div class="w-12"></div>
+                    </div>
+
+                    <!-- Window Content / Live App Interface -->
+                    <div class="p-6 bg-surface-container-lowest space-y-6">
+                        <div class="flex items-center justify-between pb-3 border-b border-black/5">
+                            <div>
+                                <h5 class="font-bold text-base text-on-surface">Servicios Activos en Monitoreo</h5>
+                                <p class="text-xs text-secondary">Actualizado automáticamente en tiempo real</p>
+                            </div>
+                            <span class="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full bg-primary/10 text-primary">
+                                <span class="w-2 h-2 rounded-full bg-[#2fa83a] apple-pulse-dot"></span>
+                                2 en curso
+                            </span>
+                        </div>
+
+                        <!-- Active Task 1 -->
+                        <div class="p-4 rounded-squircle-md bg-white border border-black/5 shadow-sm space-y-3">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <div class="text-xs font-bold text-on-surface">OT-2024-089 · Mantenimiento Subestación T-11</div>
+                                    <div class="text-[11px] text-secondary">Cliente: Electro Oriente S.A.</div>
+                                </div>
+                                <span class="text-sm font-extrabold text-primary">75%</span>
+                            </div>
+                            <!-- Progress Bar -->
+                            <div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-primary to-[#2fa83a] w-3/4 rounded-full"></div>
+                            </div>
+                            <div class="flex items-center justify-between text-[11px] text-secondary pt-1">
+                                <div class="flex items-center gap-1.5 text-primary font-medium">
+                                    <span class="material-symbols-outlined text-sm">photo_camera</span>
+                                    <span>Evidencia fotográfica subida (hace 2 horas)</span>
+                                </div>
+                                <span class="text-[10px] bg-black/5 px-2 py-0.5 rounded-md font-mono">Fase 3 de 4</span>
+                            </div>
+                        </div>
+
+                        <!-- Active Task 2 -->
+                        <div class="p-4 rounded-squircle-md bg-white border border-black/5 shadow-sm space-y-3 opacity-75">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <div class="text-xs font-bold text-on-surface">OT-2024-092 · Montaje Estructural Nave Industrial</div>
+                                    <div class="text-[11px] text-secondary">Cliente: Logística Selva S.A.C.</div>
+                                </div>
+                                <span class="text-sm font-extrabold text-secondary">15%</span>
+                            </div>
+                            <!-- Progress Bar -->
+                            <div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-primary to-[#2fa83a] w-[15%] rounded-full"></div>
+                            </div>
+                            <div class="flex items-center justify-between text-[11px] text-secondary pt-1">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-sm">pending_actions</span>
+                                    <span>Habilitación de materiales y trazo</span>
+                                </div>
+                                <span class="text-[10px] bg-black/5 px-2 py-0.5 rounded-md font-mono">Fase 1 de 4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         Workflow Section (Apple Timeline Flow)
+         ========================================================================== -->
+    <section class="py-24 bg-[#111111] text-white relative overflow-hidden" id="metodologia">
+        <div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/10 text-[#86fc82] font-bold text-xs uppercase tracking-wider mb-3">
+                    <span class="material-symbols-outlined text-sm">linear_scale</span>
+                    Metodología de Trabajo
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+                    Proceso Operativo Estándar
+                </h2>
+                <p class="text-base text-white/70">
+                    Cuatro etapas estructuradas para garantizar máxima precisión, cero imprevistos y trazabilidad absoluta.
+                </p>
+            </div>
+
+            <!-- 4 Milestone Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="apple-glass-dark rounded-squircle-md p-6 text-center border border-white/10 hover:border-[#2fa83a]/40 transition-all duration-300">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-[#111111] border-2 border-[#2fa83a] flex items-center justify-center font-bold text-sm text-[#86fc82] mb-4 shadow-lg shadow-[#2fa83a]/20">
+                        01
+                    </div>
+                    <h4 class="font-bold text-base mb-2">Cotización Técnica</h4>
+                    <p class="text-xs text-white/70 leading-relaxed">
+                        Evaluación técnica in situ o remota, análisis de planos y dimensionamiento de costos exacto.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="apple-glass-dark rounded-squircle-md p-6 text-center border border-white/10 hover:border-[#2fa83a]/40 transition-all duration-300">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-[#111111] border-2 border-white/30 flex items-center justify-center font-bold text-sm text-white mb-4">
+                        02
+                    </div>
+                    <h4 class="font-bold text-base mb-2">Planificación &amp; Ejecución</h4>
+                    <p class="text-xs text-white/70 leading-relaxed">
+                        Desarrollo bajo estricto cumplimiento normativo, protocolos de seguridad y personal calificado.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="apple-glass-dark rounded-squircle-md p-6 text-center border border-white/10 hover:border-[#2fa83a]/40 transition-all duration-300">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-[#111111] border-2 border-white/30 flex items-center justify-center font-bold text-sm text-white mb-4">
+                        03
+                    </div>
+                    <h4 class="font-bold text-base mb-2">Evidencia Digital</h4>
+                    <p class="text-xs text-white/70 leading-relaxed">
+                        Registro fotográfico continuo y reportes de prueba de aislamiento, carga o resistencia.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="apple-glass-dark rounded-squircle-md p-6 text-center border border-white/10 hover:border-[#2fa83a]/40 transition-all duration-300">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-[#111111] border-2 border-white/30 flex items-center justify-center font-bold text-sm text-white mb-4">
+                        04
+                    </div>
+                    <h4 class="font-bold text-base mb-2">Entrega &amp; Garantía</h4>
+                    <p class="text-xs text-white/70 leading-relaxed">
+                        Comisionamiento final, firma de actas de conformidad y garantía formal por escrito.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         Portfolio Section (Apple Photos Bento Grid with Lightbox)
+         ========================================================================== -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-container-max mx-auto relative" id="proyectos">
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-wider mb-3">
+                <span class="material-symbols-outlined text-sm">photo_library</span>
+                Portafolio de Obras
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-on-surface mb-4">
+                Trabajos Recientes Realizados
+            </h2>
+            <p class="text-base text-secondary">
+                Obras de alta exigencia ejecutadas con éxito en el ámbito industrial, comercial e institucional.
+            </p>
+        </div>
+
+        <!-- Asymmetric Apple Bento Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <!-- Featured Large Item (2 cols, 2 rows) -->
+            <div class="portfolio-item group relative sm:col-span-2 sm:row-span-2 h-[480px] rounded-squircle-lg overflow-hidden shadow-md cursor-pointer border border-black/5" 
+                 data-title="Mantenimiento de Subestación T-11" 
+                 data-client="Electro Oriente" 
+                 data-category="Eléctrico"
+                 data-img="img/works/WhatsApp Image 2026-09-02 at 9.54.35 AM.jpeg">
+                <img alt="Mantenimiento de Subestación" class="object-cover h-full w-full transition-transform duration-700 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-02 at 9.54.35 AM.jpeg">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div class="absolute top-4 left-4">
+                    <span class="apple-glass-pill px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm">Eléctrico</span>
+                </div>
+                <div class="absolute bottom-0 inset-x-0 p-6 text-white flex items-end justify-between">
+                    <div>
+                        <h4 class="text-xl sm:text-2xl font-bold mb-1">Mantenimiento de Subestación T-11</h4>
+                        <p class="text-sm text-[#86fc82] font-medium">Cliente: Electro Oriente</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full apple-glass-pill flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-lg">fullscreen</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="portfolio-item group relative h-56 rounded-squircle-lg overflow-hidden shadow-md cursor-pointer border border-black/5"
+                 data-title="Nave Industrial Amazonas" 
+                 data-client="Logística Selva" 
+                 data-category="Civil"
+                 data-img="img/works/WhatsApp Image 2026-09-01 at 4.14.35 PM.jpeg">
+                <img alt="Construcción de Nave Industrial" class="object-cover h-full w-full transition-transform duration-700 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-01 at 4.14.35 PM.jpeg">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-3 left-3">
+                    <span class="apple-glass-pill px-2.5 py-0.5 rounded-full text-[11px] font-bold text-white">Civil</span>
+                </div>
+                <div class="absolute bottom-0 inset-x-0 p-4 text-white">
+                    <h4 class="text-sm font-bold truncate">Nave Industrial Amazonas</h4>
+                    <p class="text-xs text-[#86fc82]">Cliente: Logística Selva</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="portfolio-item group relative h-56 rounded-squircle-lg overflow-hidden shadow-md cursor-pointer border border-black/5"
+                 data-title="Tableros de Control SCADA" 
+                 data-client="Petroperú" 
+                 data-category="Eléctrico"
+                 data-img="img/works/WhatsApp Image 2026-09-01 at 9.33.20 AM.jpeg">
+                <img alt="Sistemas de Control" class="object-cover h-full w-full transition-transform duration-700 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-01 at 9.33.20 AM.jpeg">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-3 left-3">
+                    <span class="apple-glass-pill px-2.5 py-0.5 rounded-full text-[11px] font-bold text-white">Eléctrico</span>
+                </div>
+                <div class="absolute bottom-0 inset-x-0 p-4 text-white">
+                    <h4 class="text-sm font-bold truncate">Tableros de Control SCADA</h4>
+                    <p class="text-xs text-[#86fc82]">Cliente: Petroperú</p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="portfolio-item group relative h-56 rounded-squircle-lg overflow-hidden shadow-md cursor-pointer border border-black/5"
+                 data-title="Estructuras de Soporte Metalmecánico" 
+                 data-client="Consorcio Vial" 
+                 data-category="Metalmecánica"
+                 data-img="img/works/WhatsApp Image 2026-09-02 at 7.59.25 PM.jpeg">
+                <img alt="Montaje Estructural" class="object-cover h-full w-full transition-transform duration-700 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-02 at 7.59.25 PM.jpeg">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-3 left-3">
+                    <span class="apple-glass-pill px-2.5 py-0.5 rounded-full text-[11px] font-bold text-white">Metalmecánica</span>
+                </div>
+                <div class="absolute bottom-0 inset-x-0 p-4 text-white">
+                    <h4 class="text-sm font-bold truncate">Estructuras de Soporte</h4>
+                    <p class="text-xs text-[#86fc82]">Cliente: Consorcio Vial</p>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="portfolio-item group relative h-56 rounded-squircle-lg overflow-hidden shadow-md cursor-pointer border border-black/5"
+                 data-title="Supervisión de Obra e Ingeniería" 
+                 data-client="Municipalidad Iquitos" 
+                 data-category="Ingeniería"
+                 data-img="img/works/WhatsApp Image 2026-09-02 at 9.54.21 AM.jpeg">
+                <img alt="Ingeniería de Proyecto" class="object-cover h-full w-full transition-transform duration-700 group-hover:scale-105" src="img/works/WhatsApp Image 2026-09-02 at 9.54.21 AM.jpeg">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-3 left-3">
+                    <span class="apple-glass-pill px-2.5 py-0.5 rounded-full text-[11px] font-bold text-white">Ingeniería</span>
+                </div>
+                <div class="absolute bottom-0 inset-x-0 p-4 text-white">
+                    <h4 class="text-sm font-bold truncate">Supervisión de Obra</h4>
+                    <p class="text-xs text-[#86fc82]">Cliente: Municipalidad Iquitos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Lightbox Modal (Apple Sheet Style) -->
+    <div id="project-lightbox" class="apple-modal fixed inset-0 z-50 bg-black/60 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="apple-modal-content apple-glass-card rounded-squircle-xl max-w-3xl w-full overflow-hidden shadow-2xl relative">
+            <button id="close-lightbox" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/20 text-white flex items-center justify-center hover:bg-black/40 transition-colors">
+                <span class="material-symbols-outlined text-lg">close</span>
+            </button>
+            <div class="h-80 sm:h-96 w-full relative">
+                <img id="lightbox-img" src="" alt="Proyecto" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                    <span id="lightbox-category" class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-2">Categoría</span>
+                    <h3 id="lightbox-title" class="text-xl font-bold text-on-surface">Título del Proyecto</h3>
+                    <p id="lightbox-client" class="text-sm text-secondary">Cliente</p>
+                </div>
+                <button onclick="document.getElementById('close-lightbox').click(); document.getElementById('quote-section').scrollIntoView({behavior: 'smooth'})" class="apple-btn-primary rounded-full px-5 py-2.5 text-xs font-bold shrink-0">
+                    Cotizar Proyecto Similar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         Client Trust Showcase (Apple Partner Logo Cards)
+         ========================================================================== -->
+    <section class="py-20 bg-surface-container-low/40 border-y border-black/5" id="clientes">
+        <div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-wider mb-3">
+                <span class="material-symbols-outlined text-sm">handshake</span>
+                Alianzas de Confianza
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-on-surface mb-10">
+                Empresas e Instituciones que Respaldan Nuestra Labor
+            </h2>
+
+            <!-- Clean Frosted Logo Tiles -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
+                <!-- Client 1 -->
+                <div class="apple-glass-card rounded-squircle-md p-6 h-36 flex flex-col items-center justify-center group hover:border-primary/40 transition-all duration-300">
+                    <img src="Logos/ADPIquitos.jpg" alt="ADP Iquitos" class="max-h-16 max-w-[140px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300">
+                    <span class="text-[11px] font-bold text-secondary mt-2 opacity-75 group-hover:opacity-100">ADP Iquitos</span>
+                </div>
+
+                <!-- Client 2 -->
+                <div class="apple-glass-card rounded-squircle-md p-6 h-36 flex flex-col items-center justify-center group hover:border-primary/40 transition-all duration-300">
+                    <img src="Logos/DON POLLO.png" alt="Don Pollo Tropical SAC" class="max-h-16 max-w-[140px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300">
+                    <span class="text-[11px] font-bold text-secondary mt-2 opacity-75 group-hover:opacity-100">Don Pollo Tropical</span>
+                </div>
+
+                <!-- Client 3 -->
+                <div class="apple-glass-card rounded-squircle-md p-6 h-36 flex flex-col items-center justify-center group hover:border-primary/40 transition-all duration-300">
+                    <img src="Logos/SANJUAN.jpg" alt="Municipalidad Distrital de San Juan Bautista" class="max-h-16 max-w-[140px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300">
+                    <span class="text-[11px] font-bold text-secondary mt-2 opacity-75 group-hover:opacity-100">Muni. San Juan Bautista</span>
+                </div>
+
+                <!-- Client 4 -->
+                <div class="apple-glass-card rounded-squircle-md p-6 h-36 flex flex-col items-center justify-center group hover:border-primary/40 transition-all duration-300">
+                    <img src="Logos/SODIMAC.jpeg" alt="Sodimac" class="max-h-16 max-w-[140px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300">
+                    <span class="text-[11px] font-bold text-secondary mt-2 opacity-75 group-hover:opacity-100">Sodimac</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         Quote Form (Apple iOS Settings / Form Sheet Style)
+         ========================================================================== -->
+    <section id="quote-section" class="py-24 px-4 sm:px-6 lg:px-8 max-w-container-max mx-auto relative">
+        <div class="max-w-3xl mx-auto">
+            <!-- Form Section Header -->
+            <div class="text-center mb-10">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-wider mb-3">
+                    <span class="material-symbols-outlined text-sm">request_quote</span>
+                    Atención Inmediata
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-on-surface mb-3">
+                    Solicita tu Cotización Técnica
+                </h2>
+                <p class="text-sm sm:text-base text-secondary">
+                    Nuestro equipo técnico colegiado analizará tu requerimiento y te contactará con una propuesta formal detallada.
+                </p>
+            </div>
+
+            <!-- Apple Form Card Container -->
+            <div class="apple-glass-card rounded-squircle-xl p-6 sm:p-10 shadow-2xl border border-black/5">
+                <form action="enviar.php" method="POST" enctype="multipart/form-data" class="space-y-6" id="form-cotizacion">
+                    
+                    <!-- Section: Datos Personales / Corporativos -->
+                    <div class="space-y-4">
+                        <div class="text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-1.5 pb-1 border-b border-black/5">
+                            <span class="material-symbols-outlined text-sm">person</span>
+                            <span>1. Datos de Contacto</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-on-surface mb-1.5" for="fullName">
+                                    Nombre Completo <span class="text-error">*</span>
+                                </label>
+                                <input class="apple-input" id="fullName" name="fullName" placeholder="Ej. Carlos Mendoza" required type="text"/>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-on-surface mb-1.5" for="company">
+                                    Empresa o Entidad <span class="text-secondary font-normal">(Opcional)</span>
+                                </label>
+                                <input class="apple-input" id="company" name="company" placeholder="Nombre de la corporación" type="text"/>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-on-surface mb-1.5" for="docType">
+                                    Tipo de Documento <span class="text-error">*</span>
+                                </label>
+                                <select class="apple-input" id="docType" name="docType" required>
+                                    <option disabled selected value="">Selecciona tipo...</option>
+                                    <option value="ruc">RUC (Empresas)</option>
+                                    <option value="dni">DNI (Persona Natural)</option>
+                                    <option value="ce">Carné de Extranjería</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-on-surface mb-1.5" for="docNumber">
+                                    Número de Documento <span class="text-error">*</span>
+                                </label>
+                                <input class="apple-input font-mono" id="docNumber" name="docNumber" placeholder="Ej. 20611485884" required type="text"/>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-on-surface mb-1.5" for="phone">
+                                    Teléfono / Celular <span class="text-error">*</span>
+                                </label>
+                                <input class="apple-input font-mono" id="phone" name="phone" placeholder="+51 987 654 321" required type="tel"/>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-on-surface mb-1.5" for="email">
+                                    Correo Electrónico <span class="text-error">*</span>
+                                </label>
+                                <input class="apple-input" id="email" name="email" placeholder="contacto@empresa.com" required type="email"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Requerimiento Técnico -->
+                    <div class="space-y-4 pt-4">
+                        <div class="text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-1.5 pb-1 border-b border-black/5">
+                            <span class="material-symbols-outlined text-sm">build</span>
+                            <span>2. Especificación Técnica</span>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-on-surface mb-1.5" for="serviceType">
+                                Área de Ingeniería Requerida <span class="text-error">*</span>
+                            </label>
+                            <select class="apple-input" id="serviceType" name="serviceType" required>
+                                <option disabled selected value="">Seleccione especialidad...</option>
+                                <option value="electrico">Servicio Eléctrico (Subestaciones, Tableros, Pozos a Tierra)</option>
+                                <option value="civil">Servicio Civil (Obras civiles, Remodelaciones, Acabados)</option>
+                                <option value="metalmecanico">Servicio Metalmecánico (Estructuras, Montaje, Soldadura)</option>
+                                <option value="producto">Suministro de Materiales y Equipamiento Técnico</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-on-surface mb-1.5" for="details">
+                                Alcance del Proyecto o Problema a Resolver <span class="text-error">*</span>
+                            </label>
+                            <textarea class="apple-input resize-none" id="details" name="details" placeholder="Describa el alcance de la obra, ubicación en la región, especificaciones clave o plazos requeridos..." required rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Section: Adjuntar Archivos (iOS File Uploader) -->
+                    <div class="space-y-3 pt-4">
+                        <div class="text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-1.5 pb-1 border-b border-black/5">
+                            <span class="material-symbols-outlined text-sm">attach_file</span>
+                            <span>3. Adjuntos de Respaldo <span class="text-secondary font-normal lowercase">(Opcional)</span></span>
+                        </div>
+
+                        <label for="attachments" class="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-black/15 rounded-squircle-md cursor-pointer bg-black/[0.02] hover:bg-black/[0.04] transition-colors group">
+                            <div class="flex flex-col items-center justify-center p-4 text-center">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-2">
+                                    <span class="material-symbols-outlined text-xl">cloud_upload</span>
+                                </div>
+                                <p class="text-xs sm:text-sm font-semibold text-on-surface">
+                                    Haz clic para subir o arrastra tus planos o fotos
+                                </p>
+                                <p class="text-[11px] text-secondary mt-0.5">PNG, JPG, PDF o DWG (Máx. 10MB por archivo)</p>
+                            </div>
+                            <input id="attachments" name="attachments[]" type="file" class="hidden" multiple accept="image/*,application/pdf" capture="environment" />
+                        </label>
+                        
+                        <!-- Dynamic File List Cards -->
+                        <div id="file-list" class="mt-3"></div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-6">
+                        <button type="submit" class="apple-btn-primary rounded-full w-full py-4 px-8 text-sm sm:text-base font-bold flex items-center justify-center gap-2 group shadow-xl">
+                            <span>Enviar Solicitud de Cotización</span>
+                            <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">send</span>
                         </button>
+                        <p class="text-center text-[11px] text-secondary mt-3">
+                            Respuesta técnica estimada en menos de 24 horas hábiles.
+                        </p>
                     </div>
                 </form>
             </div>
         </div>
     </section>
-    <!-- Final CTA -->
-    <section class="py-16 bg-[#2FA83A] text-[#111111] text-center px-margin-mobile">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-8">¿Listo para potenciar su infraestructura?</h2>
-            <button onclick="document.getElementById('quote-section').scrollIntoView({behavior: 'smooth'})" class="bg-[#111111] text-white px-8 py-4 rounded font-label-sm text-label-sm uppercase tracking-widest hover:bg-white hover:text-[#111111] transition-colors border border-[#111111] inline-block cursor-pointer">Solicitar Cotización Inmediata</button>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="bg-inverse-surface dark:bg-surface-container-lowest border-t border-outline-variant/30 text-secondary-fixed-dim">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
-            <div class="col-span-1 md:col-span-2">
-                <a class="font-headline-md text-headline-md text-primary-fixed mb-4 inline-block" href="#">Eléctroflash-Perú E.I.R.L.</a>
-                <p class="font-body-md text-body-md text-sm max-w-sm mb-6">Excelencia técnica en la Amazonía. Soluciones de ingeniería robustas para desafíos complejos.</p>
-            </div>
-            <div>
-                <h4 class="font-label-sm text-label-sm uppercase tracking-wider text-white mb-4">Enlaces Rápidos</h4>
-                <ul class="space-y-2 font-body-md text-body-md text-sm">
-                    <li><a class="hover:text-primary-fixed transition-colors" href="#">Inicio</a></li>
-                    <li><a class="hover:text-primary-fixed transition-colors" href="#servicios">Servicios</a></li>
-                    <li><a class="hover:text-primary-fixed transition-colors" href="#nosotros">Nosotros</a></li>
-                    <li><a class="hover:text-primary-fixed transition-colors" href="#">Privacidad</a></li>
-                    <li><a class="hover:text-primary-fixed transition-colors" href="#">Términos</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-label-sm text-label-sm uppercase tracking-wider text-white mb-4">Contacto</h4>
-                <ul class="space-y-2 font-body-md text-body-md text-sm mb-6">
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Calle Francisco Bolognesi, Com. Santa Clara, Iquitos, Loreto</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">mail</span> electroflashperu@gmail.com</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">phone</span> +51 935 808 480</li>
-                </ul>
-                <div class="flex items-center gap-4">
-                    <a class="text-secondary-fixed-dim hover:text-[#2FA83A] transition-colors duration-300" href="#">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                    </a>
-                    <a class="text-secondary-fixed-dim hover:text-[#2FA83A] transition-colors duration-300" href="#">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"></circle></svg>
-                    </a>
-                    <a class="text-secondary-fixed-dim hover:text-[#2FA83A] transition-colors duration-300" href="#">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                    </a>
-                    <a class="text-secondary-fixed-dim hover:text-[#2FA83A] transition-colors duration-300" href="#">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 21l1.65-3.8a9 9 0 113.4 2.9L3 21z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+
+    <!-- ==========================================================================
+         Final Call to Action Banner (Apple Keynote Style)
+         ========================================================================== -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-container-max mx-auto">
+        <div class="apple-glass-card rounded-squircle-xl p-8 sm:p-14 text-center relative overflow-hidden bg-gradient-to-br from-[#111111] via-[#1a1b22] to-[#003407] text-white border border-white/10 shadow-2xl">
+            <div class="max-w-2xl mx-auto relative z-10">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/10 text-[#86fc82] font-bold text-xs uppercase tracking-wider mb-4">
+                    Inicia Tu Obra Hoy
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+                    ¿Listo para elevar los estándares de tu infraestructura?
+                </h2>
+                <p class="text-sm sm:text-base text-white/80 mb-8 leading-relaxed">
+                    Conversemos sobre cómo nuestra experiencia en ingeniería amazónica puede aportar seguridad, formalidad y eficiencia a su proyecto.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button onclick="document.getElementById('quote-section').scrollIntoView({behavior: 'smooth'})" class="apple-btn-primary rounded-full px-8 py-3.5 text-sm font-bold w-full sm:w-auto shadow-lg">
+                        Solicitar Cotización Inmediata
+                    </button>
+                    <a href="https://wa.me/51935808480?text=Hola,%20deseo%20información%20sobre%20los%20servicios%20de%20Electroflash" target="_blank" rel="noopener noreferrer" class="apple-btn-secondary rounded-full px-7 py-3.5 text-sm font-bold w-full sm:w-auto flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-lg">chat</span>
+                        <span>Chat WhatsApp Directo</span>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="border-t border-outline-variant/10 px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center text-xs font-mono-data">
-            <p>© 2024 Eléctroflash-Perú E.I.R.L. Todos los derechos reservados.</p>
-            <p>RUC: 20611485884</p>
+    </section>
+
+    <!-- ==========================================================================
+         Footer (Apple macOS Dark Glass Style)
+         ========================================================================== -->
+    <footer class="bg-[#111111] text-secondary-fixed-dim pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-white/10">
+                <!-- Col 1: Brand Info -->
+                <div class="md:col-span-2 space-y-4">
+                    <a href="#" class="inline-block">
+                        <img src="img/logo-horizontal.png" alt="Logo Electroflash" class="h-10 w-auto">
+                    </a>
+                    <p class="text-sm text-white/70 max-w-sm leading-relaxed">
+                        Eléctroflash-Perú E.I.R.L. — Excelencia técnica y formalidad en la Amazonía. Soluciones integrales de ingeniería eléctrica, obras civiles y metalmecánica.
+                    </p>
+                    <div class="text-xs text-white/50">
+                        RUC: 20611485884 · Iquitos, Loreto, Perú
+                    </div>
+                </div>
+
+                <!-- Col 2: Enlaces Rápidos -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Navegación</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition-colors">Servicios Técnicos</a></li>
+                        <li><a href="#nosotros" class="hover:text-white transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="#portal" class="hover:text-white transition-colors">Portal de Clientes</a></li>
+                        <li><a href="#proyectos" class="hover:text-white transition-colors">Portafolio de Obras</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contacto -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Contacto Directo</h4>
+                    <ul class="space-y-3 text-xs sm:text-sm text-white/70">
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-sm text-[#86fc82] shrink-0 mt-0.5">location_on</span>
+                            <span>Calle Francisco Bolognesi, Com. Santa Clara, Iquitos, Loreto</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm text-[#86fc82] shrink-0">mail</span>
+                            <span>electroflashperu@gmail.com</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm text-[#86fc82] shrink-0">phone</span>
+                            <span>+51 935 808 480</span>
+                        </li>
+                    </ul>
+
+                    <!-- Social Glass Icons -->
+                    <div class="flex items-center gap-3 mt-4">
+                        <a href="https://wa.me/51935808480" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full apple-glass-pill flex items-center justify-center text-white hover:text-[#86fc82] hover:scale-110 transition-all">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        </a>
+                        <a href="mailto:electroflashperu@gmail.com" class="w-9 h-9 rounded-full apple-glass-pill flex items-center justify-center text-white hover:text-[#86fc82] hover:scale-110 transition-all">
+                            <span class="material-symbols-outlined text-sm">mail</span>
+                        </a>
+                        <a href="tel:+51935808480" class="w-9 h-9 rounded-full apple-glass-pill flex items-center justify-center text-white hover:text-[#86fc82] hover:scale-110 transition-all">
+                            <span class="material-symbols-outlined text-sm">call</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Subfooter -->
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+                <p>© 2024 Eléctroflash-Perú E.I.R.L. Todos los derechos reservados.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#hero-section" class="flex items-center gap-1 hover:text-white transition-colors">
+                        <span>Volver arriba</span>
+                        <span class="material-symbols-outlined text-sm">keyboard_arrow_up</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- ==========================================================================
+         Floating Quick WhatsApp Action Pill (iOS Dynamic Mini Button)
+         ========================================================================== -->
+    <aside aria-label="Contacto rápido" class="fixed bottom-6 right-6 z-40">
+        <a href="https://wa.me/51935808480?text=Hola,%20deseo%20solicitar%20una%20cotización%20técnica" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="apple-btn-primary rounded-full px-4 py-3 shadow-2xl flex items-center gap-2.5 text-xs font-bold hover:scale-105 active:scale-95 transition-all"
+           title="Contactar por WhatsApp">
+            <span class="w-2.5 h-2.5 rounded-full bg-white apple-pulse-dot"></span>
+            <span>Atención Inmediata</span>
+            <svg class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        </a>
+    </aside>
+
+    <!-- JavaScript Logic -->
     <script src="js/script.js"></script>
 </body>
 </html>
